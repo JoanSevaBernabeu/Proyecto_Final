@@ -6,7 +6,6 @@
 package clases;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -71,7 +70,7 @@ public class Medico implements Serializable {
         @JoinColumn(name = "dni_medico", referencedColumnName = "dni")}, inverseJoinColumns = {
         @JoinColumn(name = "sip_paciente", referencedColumnName = "sip")})
     @ManyToMany
-    private ArrayList<Paciente> pacienteList;
+    private List<Paciente> pacienteList;
 
     public Medico() {
     }
@@ -153,7 +152,7 @@ public class Medico implements Serializable {
         return pacienteList;
     }
 
-    public void setPacienteList(ArrayList<Paciente> pacienteList) {
+    public void setPacienteList(List<Paciente> pacienteList) {
         this.pacienteList = pacienteList;
     }
 

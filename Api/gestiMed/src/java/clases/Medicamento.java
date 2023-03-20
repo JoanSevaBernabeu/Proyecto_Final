@@ -6,7 +6,6 @@
 package clases;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -54,9 +53,13 @@ public class Medicamento implements Serializable {
     @Column(name = "intervalo")
     private Integer intervalo;
     @OneToMany(mappedBy = "medicamento")
-    private ArrayList<Tratamiento> tratamientoList;
+    private List<Tratamiento> tratamientoList;
 
     public Medicamento() {
+    }
+
+    public Medicamento(String id) {
+        this.id = id;
     }
 
     public Medicamento(String id, String nombre, Integer cantidad, Boolean pedir, Integer intervalo) {
@@ -66,12 +69,8 @@ public class Medicamento implements Serializable {
         this.pedir = pedir;
         this.intervalo = intervalo;
     }
-    
-    
 
-    public Medicamento(String id) {
-        this.id = id;
-    }
+    
 
     public String getId() {
         return id;
@@ -118,7 +117,7 @@ public class Medicamento implements Serializable {
         return tratamientoList;
     }
 
-    public void setTratamientoList(ArrayList<Tratamiento> tratamientoList) {
+    public void setTratamientoList(List<Tratamiento> tratamientoList) {
         this.tratamientoList = tratamientoList;
     }
 

@@ -21,7 +21,6 @@ public class ApplicationConfig extends Application{
         return resources;
     }
         private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(Rest.EnfermeroResource.class);
         resources.add(Rest.MedicamentoResource.class);
         resources.add(Rest.MedicoResource.class);
         resources.add(Rest.PacienteResource.class);

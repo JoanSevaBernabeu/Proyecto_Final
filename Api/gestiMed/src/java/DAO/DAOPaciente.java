@@ -5,10 +5,10 @@
  */
 package DAO;
 
+import static DAO.DAOHabitacion.getHabitacion;
 import static DAO.DAOMedico.getMedico;
-import static DAO.DAOEnfermero.getEnfermero;
 import static DAO.DAOTratamiento.getTratamiento;
-import clases.Enfermero;
+import clases.Habitacion;
 import clases.Medico;
 import clases.Paciente;
 import clases.Tratamiento;
@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import listas.ListaEnfermero;
 import listas.ListaMedico;
 import listas.ListaPaciente;
 
@@ -47,7 +46,7 @@ public class DAOPaciente {
             con = DriverManager.getConnection(url, usuario, password);
 
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DAOEnfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DAOPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -56,7 +55,7 @@ public class DAOPaciente {
             // Cerrar conexión
             con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DAOEnfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DAOPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -75,8 +74,6 @@ public class DAOPaciente {
                     paciente.setTratamiento(tratamiento);
                     ListaMedico medicos = obtenerMedicos(rs.getString("sip"));
                     paciente.setMedicoList(medicos.getLista());
-                    ListaEnfermero enfermeros = obtenerEnfermeros(rs.getString("sip"));
-                    paciente.setEnfermeroList(enfermeros.getLista());
                     lista.add(paciente);
                 }
             }
@@ -101,8 +98,8 @@ public class DAOPaciente {
                 paciente.setTratamiento(tratamiento);
                 ListaMedico medicos = obtenerMedicos(rs.getString("sip"));
                 paciente.setMedicoList(medicos.getLista());
-                ListaEnfermero enfermeros = obtenerEnfermeros(rs.getString("sip"));
-                paciente.setEnfermeroList(enfermeros.getLista());
+                Habitacion habitacion = getHabitacion(rs.getInt("numHabitacion"));
+                paciente.setNumHabitacion(habitacion);
             }
         }catch(SQLException ex){
             Logger.getLogger(DAOPaciente.class.getName()).log(Level.SEVERE, null, ex);
@@ -110,6 +107,8 @@ public class DAOPaciente {
         desconectar();
         return paciente;
     }
+    
+    
     
     public static ListaMedico obtenerMedicos(String sip){
         ListaMedico lista = new ListaMedico();
@@ -134,31 +133,10 @@ public class DAOPaciente {
         return lista;
     }
     
-    public static ListaEnfermero obtenerEnfermeros(String sip){
-        ListaEnfermero lista = new ListaEnfermero();
-        Statement statement = null;
-        conectar();
-        try{
-            String sentencia = "SELECT * FROM cura WHERE sip_paciente LIKE '%"+sip+"%'";
-            statement = con.createStatement();
-            ResultSet rs = statement.executeQuery(sentencia);
-            if(rs.next()){
-                while(rs.next()){
-                    Enfermero enfermero = getEnfermero(rs.getString("dni_enfermero"));
-                    lista.add(enfermero);
-                }
-            }
-        }catch(SQLException ex){
-            Logger.getLogger(DAOPaciente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        desconectar();
-        return lista;
-    }
     
     public static void pacientePost(Paciente paciente){
         Statement statement = null;
         ArrayList<Medico> listaMedicos = paciente.getMedicoList();
-        ArrayList<Enfermero> listaEnfermeros = paciente.getEnfermeroList();
         conectar();
         try{
             statement = con.createStatement();
@@ -168,7 +146,6 @@ public class DAOPaciente {
                     +"');";
             ResultSet rs = statement.executeQuery(insertPaciente);
             insertaMedicos(listaMedicos,paciente);
-            insertaEnfermeros(listaEnfermeros,paciente);
             
         }catch(SQLException ex){
             Logger.getLogger(DAOPaciente.class.getName()).log(Level.SEVERE, null, ex);
@@ -185,14 +162,6 @@ public class DAOPaciente {
         }
     }
     
-    public static void insertaEnfermeros(ArrayList<Enfermero> enfermeros,Paciente paciente) throws SQLException{
-        Statement statement = null;
-        statement = con.createStatement();
-        for(Enfermero enf: enfermeros){
-            String consulta = "INSERT INTO trata VALUES ('"+enf.getDni()+"','"+paciente.getSip()+"')";
-            ResultSet rs = statement.executeQuery(consulta);
-        }
-    }
     
     public static void pacienteDelete(String sip){
         Statement statement = null;
@@ -208,12 +177,14 @@ public class DAOPaciente {
         }
         desconectar();
     }
+    
     public static void deleteTrata(String sip) throws SQLException{
         Statement statement = con.createStatement();
         
         String delete = "DELETE FROM trata WHERE sip_paciente LIKE '%"+sip+"%'";
         ResultSet rs = statement.executeQuery(delete);
     }
+    
     public static void deleteCura(String sip) throws SQLException{
         Statement statement = con.createStatement();
         String delete = "DELETE FROM cura WHERE sip_paciente LIKE '%"+sip+"%'";

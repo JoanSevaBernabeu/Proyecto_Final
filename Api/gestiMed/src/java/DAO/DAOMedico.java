@@ -42,7 +42,7 @@ public class DAOMedico {
             con = DriverManager.getConnection(url, usuario, password);
 
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DAOEnfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DAOMedico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -51,7 +51,7 @@ public class DAOMedico {
             // Cerrar conexión
             con.close();
         } catch (SQLException ex) {
-            Logger.getLogger(DAOEnfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DAOMedico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

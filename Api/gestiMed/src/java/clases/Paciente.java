@@ -67,8 +67,9 @@ public class Paciente implements Serializable {
     private String urgencia;
     @ManyToMany(mappedBy = "pacienteList")
     private ArrayList<Medico> medicoList;
-    @ManyToMany(mappedBy = "pacienteList")
-    private ArrayList<Enfermero> enfermeroList;
+    @JoinColumn(name = "numHabitacion", referencedColumnName = "numHabitacion")
+    @ManyToOne
+    private Habitacion numHabitacion;
     @JoinColumn(name = "tratamiento", referencedColumnName = "nombre")
     @ManyToOne
     private Tratamiento tratamiento;
@@ -148,13 +149,12 @@ public class Paciente implements Serializable {
         this.medicoList = medicoList;
     }
 
-    @XmlTransient
-    public ArrayList<Enfermero> getEnfermeroList() {
-        return enfermeroList;
+    public Habitacion getNumHabitacion() {
+        return numHabitacion;
     }
 
-    public void setEnfermeroList(ArrayList<Enfermero> enfermeroList) {
-        this.enfermeroList = enfermeroList;
+    public void setNumHabitacion(Habitacion numHabitacion) {
+        this.numHabitacion = numHabitacion;
     }
 
     public Tratamiento getTratamiento() {

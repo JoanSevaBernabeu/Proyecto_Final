@@ -63,9 +63,8 @@ public class Tratamiento implements Serializable {
         this.descripcion = descripcion;
         this.solucion = solucion;
     }
+    
 
-    
-    
     public Tratamiento(String nombre) {
         this.nombre = nombre;
     }

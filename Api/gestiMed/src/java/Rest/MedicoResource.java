@@ -5,11 +5,8 @@
  */
 package Rest;
 
-import DAO.DAOEnfermero;
 import DAO.DAOMedico;
-import clases.Enfermero;
 import clases.Medico;
-import listas.ListaEnfermero;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
