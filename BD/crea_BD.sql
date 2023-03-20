@@ -13,15 +13,10 @@ turno varchar(255),
 primary key(dni)
 );
 
-CREATE TABLE enfermero(
-dni varchar(255) NOT NULL,
-nombre varchar(255),
-apellidos varchar(255),
-email varchar(255),
-contrasenya varchar(255),
-numContacto varchar(255),
-turno varchar(255),
-primary key(dni)
+CREATE TABLE habitacion(
+numHabitacion tinyint NOT NULL,
+habOcupadas tinyint,
+primary key(numHabitacion)
 );
 
 CREATE TABLE medicamento(
@@ -50,8 +45,10 @@ numContacto varchar(255),
 nacimiento datetime,
 tratamiento varchar(255),
 urgencia varchar(255),
+numHabitacion tinyint,
 primary key(sip),
-foreign key(tratamiento) references tratamiento(nombre)
+foreign key(tratamiento) references tratamiento(nombre),
+foreign key(numHabitacion) references habitacion(numHabitacion)
 );
 
 CREATE TABLE trata(
@@ -62,11 +59,4 @@ foreign key (dni_medico) references medico(dni),
 foreign key (sip_paciente) references paciente(sip)
 );
 
-CREATE TABLE cura(
-dni_enfermero varchar(255),
-sip_paciente varchar (255),
-primary key(dni_enfermero, sip_paciente),
-foreign key (dni_enfermero) references enfermero(dni),
-foreign key (sip_paciente) references paciente(sip)
-);
 
