@@ -40,6 +40,8 @@ public class Habitacion implements Serializable {
     private Short numHabitacion;
     @Column(name = "habOcupadas")
     private Short habOcupadas;
+    @Column(name="habLlena")
+    private boolean ocupada;
     @OneToMany(mappedBy = "numHabitacion")
     private List<Paciente> pacienteList;
 
@@ -98,6 +100,14 @@ public class Habitacion implements Serializable {
     @Override
     public String toString() {
         return "clases.Habitacion[ numHabitacion=" + numHabitacion + " ]";
+    }
+
+    public boolean isOcupada() {
+        return ocupada;
+    }
+
+    public void setOcupada(boolean ocupada) {
+        this.ocupada = ocupada;
     }
     
 }

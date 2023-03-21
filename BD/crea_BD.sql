@@ -16,6 +16,7 @@ primary key(dni)
 CREATE TABLE habitacion(
 numHabitacion tinyint NOT NULL,
 habOcupadas tinyint,
+habLlena boolean,
 primary key(numHabitacion)
 );
 

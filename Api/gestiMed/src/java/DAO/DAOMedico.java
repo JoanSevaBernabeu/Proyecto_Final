@@ -65,7 +65,7 @@ public class DAOMedico {
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
                 while(rs.next()){
-                    Medico med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"),rs.getString("turno"));
+                    Medico med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"));
                     ListaPaciente pacientes = obtenerPacientes(rs.getString("dni"));
                     med.setPacienteList(pacientes.getLista());
                     lista.add(med);
@@ -89,7 +89,7 @@ public class DAOMedico {
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
                 while(rs.next()){
-                    Medico med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"),rs.getString("turno"));
+                    Medico med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"));
                     ListaPaciente pacientes = obtenerPacientes(rs.getString("dni"));
                     med.setPacienteList(pacientes.getLista());
                     lista.add(med);
@@ -112,7 +112,7 @@ public class DAOMedico {
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
-                med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"),rs.getString("turno"));
+                med = new Medico(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellidos"),rs.getString("email"),rs.getString("contrasenya"),rs.getString("numContacto"));
                 ListaPaciente pacientes = obtenerPacientes(rs.getString("dni"));
                 med.setPacienteList(pacientes.getLista());
             }

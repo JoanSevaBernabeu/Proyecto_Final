@@ -36,8 +36,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Medico.findByApellidos", query = "SELECT m FROM Medico m WHERE m.apellidos = :apellidos"),
     @NamedQuery(name = "Medico.findByEmail", query = "SELECT m FROM Medico m WHERE m.email = :email"),
     @NamedQuery(name = "Medico.findByContrasenya", query = "SELECT m FROM Medico m WHERE m.contrasenya = :contrasenya"),
-    @NamedQuery(name = "Medico.findByNumContacto", query = "SELECT m FROM Medico m WHERE m.numContacto = :numContacto"),
-    @NamedQuery(name = "Medico.findByTurno", query = "SELECT m FROM Medico m WHERE m.turno = :turno")})
+    @NamedQuery(name = "Medico.findByNumContacto", query = "SELECT m FROM Medico m WHERE m.numContacto = :numContacto")})
 public class Medico implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -64,8 +63,6 @@ public class Medico implements Serializable {
     @Column(name = "numContacto")
     private String numContacto;
     @Size(max = 255)
-    @Column(name = "turno")
-    private String turno;
     @JoinTable(name = "trata", joinColumns = {
         @JoinColumn(name = "dni_medico", referencedColumnName = "dni")}, inverseJoinColumns = {
         @JoinColumn(name = "sip_paciente", referencedColumnName = "sip")})
@@ -75,14 +72,13 @@ public class Medico implements Serializable {
     public Medico() {
     }
 
-    public Medico(String dni, String nombre, String apellidos, String email, String contrasenya, String numContacto, String turno) {
+    public Medico(String dni, String nombre, String apellidos, String email, String contrasenya, String numContacto) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
         this.contrasenya = contrasenya;
         this.numContacto = numContacto;
-        this.turno = turno;
     }
     
     
@@ -137,14 +133,6 @@ public class Medico implements Serializable {
 
     public void setNumContacto(String numContacto) {
         this.numContacto = numContacto;
-    }
-
-    public String getTurno() {
-        return turno;
-    }
-
-    public void setTurno(String turno) {
-        this.turno = turno;
     }
 
     @XmlTransient

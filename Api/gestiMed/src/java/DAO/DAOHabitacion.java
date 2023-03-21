@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 
 import java.sql.Statement;
 import java.sql.ResultSet;
+import listas.ListaHabitaciones;
 
 /**
  *
@@ -50,7 +51,7 @@ public class DAOHabitacion {
         }
     }
     
-    public static Habitacion getHabitacion(int numHabitacion){
+    public static Habitacion getHabitacion(Short numHabitacion){
         Habitacion habitacion = new Habitacion();
         Statement statement = null;
         conectar();
@@ -60,6 +61,7 @@ public class DAOHabitacion {
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
                 habitacion.setNumHabitacion(rs.getShort("numHabitacion"));
+                habitacion.setOcupada(rs.getBoolean("habLlena"));
                 habitacion.setHabOcupadas(rs.getShort("habOcupadas"));
             }
         }catch(SQLException ex){
@@ -67,5 +69,23 @@ public class DAOHabitacion {
         }
         desconectar();
         return habitacion;
+    }
+    
+    public static ListaHabitaciones obtenerHabitaciones(){
+        ListaHabitaciones lista = new ListaHabitaciones();
+        Statement statement = null;
+        conectar();
+        try{
+            String sentencia = "SELECT * FROM habitaciones";
+            statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(sentencia);
+            if(rs.next()){
+                
+            }
+        }catch(SQLException ex){
+            Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+        return lista;
     }
 }
