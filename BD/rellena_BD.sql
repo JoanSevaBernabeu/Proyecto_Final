@@ -1,14 +1,14 @@
-INSERT INTO medico(dni,nombre,apellidos,email,contrasenya,numContacto,turno)
+INSERT INTO medico(dni,nombre,apellidos,email,contrasenya,numContacto)
 VALUES
-('49778698G','Debora','Florin Crespo','deboraf@medico.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','620300301','mañana'),
-('78058395H','Claudia','Perez Anton','claudiap@medico.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','688493860','tarde'),
-('58583045Z','Alejandro','Cuesta Cuevas','alejandroc@medico.es','88D4266FD4E6338D13B845FCF289579D209C897823B9217DA3E161936F031589','680427904','noche');
+('49778698G','Debora','Florin Crespo','deboraf@medico.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','620300301'),
+('78058395H','Claudia','Perez Anton','claudiap@medico.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','688493860'),
+('58583045Z','Alejandro','Cuesta Cuevas','alejandroc@medico.es','88D4266FD4E6338D13B845FCF289579D209C897823B9217DA3E161936F031589','680427904');
 
-INSERT INTO enfermero(dni,nombre,apellidos,email,contrasenya,numContacto,turno)
+INSERT INTO habitacion(numHabitacion,numCamasDisp,numCamasOcu,habLlena)
 VALUES
-('48777698B','Joan','Seva Bernabeu','joans@enfermero.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','620220902','mañana'),
-('34785939C','Jose','Garcia Gracia','joseg@enfermero.es','88D4266FD4E6338D13B845FCF289579D209C897823B9217DA3E161936F031589','620215678','tarde'),
-('12378946T','Antonio','Alonso Fernandez','antonioa@enfermero.es','88D4266FD4E6338D13B845FCF289579D209C897823B9217DA3E161936F031589',620234967,'noche');
+(001,2,1,false),
+(002,1,1,true),
+(003,3,2,false);
 
 INSERT INTO medicamento 
 VALUES 
@@ -33,9 +33,10 @@ VALUES
 ('49778698G','04017509'),('78058395H','04017509'),('58583045Z','04017509'),
 ('49778698G','02847304'),('78058395H','02847304'),('58583045Z','02847304');
 
-INSERT INTO cura 
-VALUES
-('48777698B','03670720'),('34785939C','03670720'),('12378946T','03670720'),
-('48777698B','04017509'),('34785939C','04017509'),('12378946T','04017509'),
-('48777698B','02847304'),('34785939C','02847304'),('12378946T','02847304');
 
+select * from medico;
+select * from habitacion;
+select * from medicamento;
+select * from tratamiento;
+select * from paciente;
+select * from trata;

@@ -9,13 +9,13 @@ apellidos varchar(255),
 email varchar(255),
 contrasenya varchar(255),
 numContacto varchar(255),
-turno varchar(255),
 primary key(dni)
 );
 
 CREATE TABLE habitacion(
 numHabitacion tinyint NOT NULL,
-habOcupadas tinyint,
+numCamasDisp tinyint,
+numCamasOcu tinyint,
 habLlena boolean,
 primary key(numHabitacion)
 );
@@ -59,5 +59,7 @@ primary key(dni_medico, sip_paciente),
 foreign key (dni_medico) references medico(dni),
 foreign key (sip_paciente) references paciente(sip)
 );
+
+drop schema gestimed;
 
 
