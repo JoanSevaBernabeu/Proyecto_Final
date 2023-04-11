@@ -98,7 +98,7 @@ public class DAOPaciente {
                 paciente.setTratamiento(tratamiento);
                 ListaMedico medicos = obtenerMedicos(rs.getString("sip"));
                 paciente.setMedicoList(medicos.getLista());
-                Habitacion habitacion = getHabitacion(rs.getInt("numHabitacion"));
+                Habitacion habitacion = getHabitacion(rs.getShort("numHabitacion"));
                 paciente.setNumHabitacion(habitacion);
             }
         }catch(SQLException ex){

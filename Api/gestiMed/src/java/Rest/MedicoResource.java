@@ -57,15 +57,4 @@ public class MedicoResource {
         return response;
     }
     
-    @GET
-    @Path("turno/{turno}")
-    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response getTurnosMedicos(@PathParam("turno") String turno){
-        Response response;
-        
-        ListaMedico lista = DAOMedico.getMedicos(turno);
-        response = Response.status(Response.Status.OK).entity(lista).build();
-        
-        return response;
-    }
 }
