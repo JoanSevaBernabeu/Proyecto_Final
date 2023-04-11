@@ -4,11 +4,11 @@ VALUES
 ('78058395H','Claudia','Perez Anton','claudiap@medico.es','03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4','688493860'),
 ('58583045Z','Alejandro','Cuesta Cuevas','alejandroc@medico.es','88D4266FD4E6338D13B845FCF289579D209C897823B9217DA3E161936F031589','680427904');
 
-INSERT INTO habitacion(numHabitacion,numCamasDisp,numCamasOcu,habLlena)
+INSERT INTO habitacion(numHabitacion,numCamasDisp,numCamasOcu)
 VALUES
-(001,2,1,false),
-(002,1,1,true),
-(003,3,2,false);
+(001,2,1),
+(002,1,1),
+(003,3,2);
 
 INSERT INTO medicamento 
 VALUES 

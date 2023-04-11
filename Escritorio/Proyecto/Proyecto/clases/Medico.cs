@@ -14,14 +14,13 @@ namespace Proyecto.clases
         private string email;
         private string contrasenya;
         private string numContacto;
-        private string turno;
         private List<Paciente> pacientes;
 
         //Constructores 
 
         public Medico() { }
 
-        public Medico(string dni, string nombre, string apellidos, string email, string contrasenya, string numContacto, string turno)
+        public Medico(string dni, string nombre, string apellidos, string email, string contrasenya, string numContacto)
         {
             this.dni = dni;
             this.nombre = nombre;
@@ -29,7 +28,6 @@ namespace Proyecto.clases
             this.email = email;
             this.contrasenya = contrasenya;
             this.numContacto = numContacto;
-            this.turno = turno;
         }
 
         //Getters
@@ -40,7 +38,6 @@ namespace Proyecto.clases
         public string getEmail() { return email; }
         public string getContrasenya() { return contrasenya; }
         public string getNumContacto() { return numContacto; }
-        public string getTurno() { return turno; }
         public List<Paciente> getPacientes() { return pacientes; }
 
         // Setters
@@ -50,7 +47,6 @@ namespace Proyecto.clases
         public void setApellidos(string apellidos) { this.apellidos = apellidos; }
         public void setEmail(string email) { this.email = email; }
         public void setContrasenya(string contrasenya) { this.contrasenya = contrasenya; }
-        public void setTurno(string turno) { this.turno = turno; }
         public void setPacientes(List<Paciente> pacientes) { this.pacientes = pacientes; }
     }
 }

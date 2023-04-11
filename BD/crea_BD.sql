@@ -16,7 +16,6 @@ CREATE TABLE habitacion(
 numHabitacion tinyint NOT NULL,
 numCamasDisp tinyint,
 numCamasOcu tinyint,
-habLlena boolean,
 primary key(numHabitacion)
 );
 
