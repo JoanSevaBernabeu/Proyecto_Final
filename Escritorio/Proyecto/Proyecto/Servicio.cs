@@ -24,13 +24,7 @@ namespace Proyecto
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Medico>>(response.Content);
         }
-        public ObservableCollection<Enfermero> getEnfermerosTurno(string turno)
-        {
-            var client = new RestClient(ruta);
-            var request = new RestRequest("enfermero/turno/" + turno, Method.GET);
-            var response = client.Execute(request);
-            return JsonConvert.DeserializeObject<ObservableCollection<Enfermero>>(response.Content);
-        }
+
         public ObservableCollection<Tratamiento> getAllTratamientos()
         {
             var client = new RestClient(ruta);
