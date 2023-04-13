@@ -13,10 +13,6 @@ namespace Proyecto
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ObservableCollection<Enfermero> listaEnfermerosMañana;
-        public ObservableCollection<Enfermero> listaEnfermerosTarde;
-        public ObservableCollection<Enfermero> listaEnfermerosNoche;
-
         public ObservableCollection<Medico> listaMedicosMañana;
         public ObservableCollection<Medico> listaMedicosTarde;
         public ObservableCollection<Medico> listaMedicosNoche;

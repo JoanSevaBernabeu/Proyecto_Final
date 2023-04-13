@@ -14,7 +14,6 @@ namespace Proyecto.clases
         private string numContacto;
         private DateTime nacimiento;
         private List<Medico> medicos;
-        private List<Enfermero> enfermeros;
         private Tratamiento tratamiento;
 
         //Constructores
@@ -36,7 +35,6 @@ namespace Proyecto.clases
         public string getNumContactos() { return numContacto; }
         public DateTime getNacimiento() { return nacimiento; }
         public List<Medico> getMedicos() { return medicos; }
-        public List<Enfermero> getEnfermeros() { return enfermeros; }
         public Tratamiento getTratamiento() { return tratamiento; }
 
         //Setters
@@ -46,7 +44,6 @@ namespace Proyecto.clases
         public void setNumContacto(string numContacto) { this.numContacto = numContacto; }
         public void setNacimiento(DateTime nacimiento) { this.nacimiento = nacimiento; }
         public void setMedicos(List<Medico> medicos) { this.medicos = medicos; }
-        public void setEnfermeros(List<Enfermero> enfermeros) { this.enfermeros = enfermeros; }
         public void setTratamiento(Tratamiento tratamiento) { this.tratamiento = tratamiento; }
     }
 }

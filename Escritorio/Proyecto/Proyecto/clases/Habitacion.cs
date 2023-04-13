@@ -22,6 +22,11 @@ namespace Proyecto.clases
             this.numCamasOcu = numCamasOcu;
         }
 
+        public void addPaciente(Paciente paciente)
+        {
+            if (numCamasDisp > numCamasOcu) pacientes.Add(paciente);
+        }
+
         // Getters
         public int getNumHabitacion() { return numHabitacion; }
         public int getNumCamasDisponibles() { return numCamasDisp; }

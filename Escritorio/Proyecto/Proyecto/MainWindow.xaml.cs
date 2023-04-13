@@ -27,7 +27,7 @@ namespace Proyecto
             InitializeComponent();
             DataContext = _vm;
         }
-        private void limpiarButton_Click(object sender RoutedEventArgs e)
+        private void LimpiarButton_Click(object sender, RoutedEventArgs e)
         {
             _vm.limpiarPantalla();
         }
