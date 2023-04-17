@@ -38,8 +38,8 @@ public class Habitacion implements Serializable {
     @NotNull
     @Column(name = "numHabitacion")
     private Short numHabitacion;
-    @Column(name = "habOcupadas")
-    private Short habOcupadas;
+    @Column(name = "camOcupadas")
+    private Short camOcupadas;
     @Column(name="habLlena")
     private boolean ocupada;
     @OneToMany(mappedBy = "numHabitacion")
@@ -61,11 +61,11 @@ public class Habitacion implements Serializable {
     }
 
     public Short getHabOcupadas() {
-        return habOcupadas;
+        return camOcupadas;
     }
 
     public void setHabOcupadas(Short habOcupadas) {
-        this.habOcupadas = habOcupadas;
+        this.camOcupadas = habOcupadas;
     }
 
     @XmlTransient

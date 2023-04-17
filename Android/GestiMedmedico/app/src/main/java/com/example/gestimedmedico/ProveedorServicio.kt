@@ -7,14 +7,6 @@ import retrofit2.http.Headers
 import retrofit2.http.Path
 
 interface ProveedorServicio {
-    @GET("enfermero")
-    @Headers("Accept: application/json","Content-Type: application/json")
-    suspend fun getAllEnfermeros(): Response<ArrayList<Enfermero>>
-
-    @GET("enfermero/dni/{dni}")
-    @Headers("Accept: application/json","Content-Type: application/json")
-    suspend fun getEnfermero(@Path("dni") id:String):Response<Enfermero>
-
     @GET("medico")
     @Headers("Accept: application/json","Content-Type: application/json")
     suspend fun getAllMedicos():Response<ArrayList<Medico>>

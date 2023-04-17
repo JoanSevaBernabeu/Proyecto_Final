@@ -24,11 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         /*
-        var enfermeros : ArrayList<Enfermero> = addEnfermeros()
-        var medicos : List<Medico> = addMedicos()
-        var medicamento : Medicamento = addMedicamentos()
-        var tratamiento : Tratamiento = addTratamiento(medicamento)
-        var pacientes : List<Paciente> = addPacientes(enfermeros,medicos,tratamiento)
+
 
 
         getPacientes()
@@ -50,27 +46,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun addEnfermeros():ArrayList<Enfermero>{
-        var enfermeros = ArrayList<Enfermero>()
-        enfermeros.add(Enfermero("1","1","1","1","1","1","1","1"))
-        enfermeros.add(Enfermero("2","2","2","2","2","2","2","2"))
-        enfermeros.add(Enfermero("3","3","3","3","3","3","3","3"))
-        return enfermeros
-    }
-
     private fun addMedicos(): ArrayList<Medico>{
         var medicos = ArrayList<Medico>()
         medicos.add(Medico("2","2","2","2","2","2","2","2"))
         medicos.add(Medico("2","2","2","2","2","2","2","2"))
         medicos.add(Medico("2","2","2","2","2","2","2","2"))
         return medicos
-    }
-    private fun addPacientes(enfermeros: List<Enfermero>,medicos: List<Medico>, tratamiento: Tratamiento): ArrayList<Paciente>{
-        var pacientes = ArrayList<Paciente>()
-        pacientes.add(Paciente("586729795","Joan1","Seva Bernabeu", "620220902", Date(1997,4,30),medicos,enfermeros,"Urgente",tratamiento))
-        pacientes.add(Paciente("571283758","Joan2","Seva Bernabeu", "620220902", Date(1997,4,30),medicos,enfermeros,"Medio",tratamiento))
-        pacientes.add(Paciente("059792387","Joan3","Seva Bernabeu", "620220902", Date(1997,4,30),medicos,enfermeros,"No-Urgente",tratamiento))
-        return pacientes
     }
 
     private fun addMedicamentos():Medicamento{

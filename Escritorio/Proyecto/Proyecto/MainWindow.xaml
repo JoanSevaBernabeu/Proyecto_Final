@@ -12,6 +12,12 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
+        <Style TargetType="TextBlock" x:Key="enunciadoTextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
         <Style TargetType="TextBlock" x:Key="tituloTextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -54,7 +60,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.25*"></RowDefinition>
             </Grid.RowDefinitions>
             <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="1">
                 <Grid Grid.Row="0" Grid.Column="0">
@@ -68,18 +74,20 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
-                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos personales"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
                     <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
                     <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
-                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
-                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}"/>
-                    <TextBox Grid.Column="3" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
+                    <TextBlock Grid.Column="2" Grid.Row="3" Style="{StaticResource baseTextBlock}"/>
                     <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
                 </Grid>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">
@@ -94,20 +102,36 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
-                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos personales"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
                     <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
                     <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
-                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
-                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}"/>
-                    <TextBox Grid.Column="3" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
+                    <TextBlock Grid.Column="2" Grid.Row="3" Style="{StaticResource baseTextBlock}"/>
                     <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
                 </Grid>
             </Border>
+            <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="Sintomas"/>
+                    <TextBox/>
+                </DockPanel>
+            </Border>
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"/>
+                <Button Grid.Column="1"/>
+            </Grid>
         </Grid>
         
         <!--

@@ -43,15 +43,11 @@ class PacienteFragment(): Fragment() {
     }
     private fun bindDatos(view: View,paciente: Paciente){
         var medicos : List<Medico> = paciente.medicos
-        var enfermeros : List<Enfermero> = paciente.enfermeros
         var tratamiento : Tratamiento = paciente.tratamiento
         var medicamento : Medicamento = tratamiento.medicamento
         view.findViewById<TextView>(R.id.medico1Text).setText(medicos[0].nombre + " " + medicos[0].apellidos)
         view.findViewById<TextView>(R.id.medico2Text).setText(medicos[1].nombre + " " + medicos[1].apellidos)
         view.findViewById<TextView>(R.id.medico3Text).setText(medicos[2].nombre + " " + medicos[2].apellidos)
-        view.findViewById<TextView>(R.id.enfermero1Text).setText(enfermeros[0].nombre + " " + enfermeros[0].apellidos)
-        view.findViewById<TextView>(R.id.enfermero2Text).setText(enfermeros[1].nombre + " " + enfermeros[1].apellidos)
-        view.findViewById<TextView>(R.id.enfermero3Text).setText(enfermeros[2].nombre + " " + enfermeros[2].apellidos)
         view.findViewById<TextView>(R.id.nombreTratamiento).setText(tratamiento.nombre)
         view.findViewById<TextView>(R.id.descTratamiento).setText(tratamiento.descripcion)
         view.findViewById<TextView>(R.id.nombreMedicamento).setText(medicamento.nombre)

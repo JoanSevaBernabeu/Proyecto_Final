@@ -38,21 +38,6 @@ class AdaptadorApi {
         }
     }
 
-    fun cargarEnfermeros():Deferred<ArrayList<Enfermero>>{
-        val proveedorServicio: ProveedorServicio = creaRetrofit()
-        var respuesta = ArrayList<Enfermero>()
-
-        return CoroutineScope(Dispatchers.Main).async {
-            val response: Response<ArrayList<Enfermero>> = proveedorServicio.getAllEnfermeros()
-            if(response.isSuccessful){
-                val enfermeroResponse = response.body()
-                if(enfermeroResponse != null){
-                    respuesta = enfermeroResponse
-                }
-            }
-            respuesta
-        }
-    }
 
     private fun creaRetrofit(): ProveedorServicio{
         val url = "http://192.168.1.128:8081/gestimed/gestimed/"
