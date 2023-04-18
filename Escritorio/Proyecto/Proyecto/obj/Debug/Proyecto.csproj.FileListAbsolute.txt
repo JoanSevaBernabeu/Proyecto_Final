@@ -35,3 +35,7 @@ D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Proyecto
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Proyecto.exe
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\HabitacionNueva.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\MedicoNuevo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\HabitacionNueva.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\MedicoNuevo.baml

@@ -37,10 +37,13 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="Button" x:Key="baseButton">
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="sintomasTextBox">
+            <Setter Property="Margin" Value="50"/>
         </Style>
     </Window.Resources>
     <DockPanel>
@@ -104,24 +107,24 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos personales"/>
-                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos hospitalarios"/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº habitacion: " />
                     <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
                     <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
                     <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
                     <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
                     <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}"/>
                     <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
-                    <TextBlock Grid.Column="2" Grid.Row="3" Style="{StaticResource baseTextBlock}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Medicos: "/>
+                    <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico"/>
                     <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
+                    <ComboBox Grid.Column="3" Grid.Row="2" x:Name="medicoComboBox"/>
                 </Grid>
             </Border>
             <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="Sintomas"/>
-                    <TextBox/>
+                    <TextBlock DockPanel.Dock="Top" Text="Sintomas" Style="{StaticResource enunciadoTextBlock}"/>
+                    <TextBox Style="{StaticResource sintomasTextBox}"/>
                 </DockPanel>
             </Border>
             <Grid Grid.Column="1" Grid.Row="2">
@@ -129,65 +132,9 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"/>
-                <Button Grid.Column="1"/>
+                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}"/>
+                <Button Grid.Column="1" Content="Cancelar" Style="{StaticResource baseButton}"/>
             </Grid>
         </Grid>
-        
-        <!--
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="0.2*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="0.2*"></RowDefinition>
-            </Grid.RowDefinitions>
-            
-            <TextBlock Text="Nombre: " Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="Medicos/Medicas" Grid.Column="1" Grid.Row="5" Style="{StaticResource tituloTextBlock}"/>
-            <TextBlock Text="Enfermeros/Enfermeras" Grid.Column="3" Grid.Row="5" Style="{StaticResource tituloTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="1" Grid.Row="6" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="1" Grid.Row="7" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="1" Grid.Row="8" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="3" Grid.Row="6" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="3" Grid.Row="7" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="3" Grid.Row="8" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="Apellidos: " Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBlock}"/>
-            <TextBlock Text="texto" Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBlock}"/>
-            <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-            <TextBox Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
-            <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource baseTextBox}"/>
-            <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-            <TextBox Grid.Column="4" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
-            <ComboBox Grid.Column="2" Grid.Row="6" Style="{StaticResource baseComboBox}"/>
-            <ComboBox Grid.Column="2" Grid.Row="7" Style="{StaticResource baseComboBox}"/>
-            <ComboBox Grid.Column="2" Grid.Row="8" Style="{StaticResource baseComboBox}"/>
-            <ComboBox Grid.Column="4" Grid.Row="6" Style="{StaticResource baseComboBox}"/>
-            <ComboBox Grid.Column="4" Grid.Row="7" Style="{StaticResource baseComboBox}"/>
-            <ComboBox Grid.Column="4" Grid.Row="8" Style="{StaticResource baseComboBox}"/>
-            <TextBox Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="7"/>
-            <Button Grid.Column="5" Grid.Row="9" Content="Aceptar" Style="{StaticResource baseButton}"/>
-            <Button Grid.Column="6" Grid.Row="9" Content="Cancelar" Style="{StaticResource baseButton}"/>
-        </Grid>
-        -->
     </DockPanel>
 </Window>
