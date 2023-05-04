@@ -12,6 +12,8 @@ namespace Proyecto.clases
         private string nombre;
         private string apellidos;
         private string numContacto;
+        private string dolencias;
+        private string urgencia;
         private DateTime nacimiento;
         private List<Medico> medicos;
         private Tratamiento tratamiento;
@@ -19,13 +21,15 @@ namespace Proyecto.clases
         //Constructores
         public Paciente() { }
 
-        public Paciente(string sip, string nombre, string apellidos, string numContacto, DateTime nacimiento)
+        public Paciente(string sip, string nombre, string apellidos, string numContacto, DateTime nacimiento, string dolencias, string urgencia)
         {
             this.sip = sip;
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.numContacto = numContacto;
             this.nacimiento = nacimiento;
+            this.dolencias = dolencias;
+            this.urgencia = urgencia;
         }
 
         // Getters

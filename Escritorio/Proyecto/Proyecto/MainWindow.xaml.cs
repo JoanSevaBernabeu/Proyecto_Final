@@ -20,16 +20,35 @@ namespace Proyecto
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindowVM _vm;
+
         public MainWindow()
         {
-            _vm = new MainWindowVM();
             InitializeComponent();
-            DataContext = _vm;
         }
-        private void LimpiarButton_Click(object sender, RoutedEventArgs e)
+
+        private void CommandBindingCancelar_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            _vm.limpiarPantalla();
+
+        }
+        private void CommandBindingSalir_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CommandBindingHabitacionNueva_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CommandBindingTratamientoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CommandBindingMedicamentoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CommandBindingMedicoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
         }
     }
 }
