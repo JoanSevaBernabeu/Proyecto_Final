@@ -32,23 +32,29 @@ namespace Proyecto
         }
         private void CommandBindingSalir_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            System.Windows.Application.Current.Shutdown();
         }
         private void CommandBindingHabitacionNueva_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            HabitacionNueva habitacion_nueva = new HabitacionNueva();
+            habitacion_nueva.Owner = this;
+            habitacion_nueva.Show();
         }
         private void CommandBindingTratamientoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            TratamientoNuevo tratamiento_nuevo = new TratamientoNuevo();
+            tratamiento_nuevo.Owner = this;
+            tratamiento_nuevo.Show();
         }
         private void CommandBindingMedicamentoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            
         }
         private void CommandBindingMedicoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            MedicoNuevo medico_nuevo = new MedicoNuevo();
+            medico_nuevo.Owner = this;
+            medico_nuevo.Show();
         }
     }
 }

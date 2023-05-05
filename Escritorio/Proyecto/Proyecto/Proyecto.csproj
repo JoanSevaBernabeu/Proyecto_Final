@@ -99,8 +99,8 @@
       <DependentUpon>MedicoNuevo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Servicio.cs" />
-    <Compile Include="Tratamiento.xaml.cs">
-      <DependentUpon>Tratamiento.xaml</DependentUpon>
+    <Compile Include="TratamientoNuevo.xaml.cs">
+      <DependentUpon>TratamientoNuevo.xaml</DependentUpon>
     </Compile>
     <Page Include="HabitacionNueva.xaml">
       <SubType>Designer</SubType>
@@ -126,7 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tratamiento.xaml">
+    <Page Include="TratamientoNuevo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

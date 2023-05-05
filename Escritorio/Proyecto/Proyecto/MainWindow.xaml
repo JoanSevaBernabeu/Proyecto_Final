@@ -77,15 +77,15 @@
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Tratamiento">
-                <MenuItem Header="_Tratamiento nuevo..."/>
+                <MenuItem Header="_Tratamiento nuevo..." InputGestureText="Ctrl + T" Command="local:CustomCommands.TratNuevo"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicamentos">
-                <MenuItem Header="_Medicacion nueva..."/>
+                <MenuItem Header="_Medicacion nueva..." InputGestureText="Ctrl + M" Command="local:CustomCommands.MedicamentoNuevo"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicos">
-                <MenuItem Header="_Medico Nuevo..."/>
+                <MenuItem Header="M_edico Nuevo..." InputGestureText="Ctrl + E" Command="local:CustomCommands.MedicoNuevo"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
@@ -165,7 +165,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}"/>
-                <Button Grid.Column="1" Content="Cancelar" Style="{StaticResource baseButton}"/>
+                <Button Grid.Column="1" Content="Cancelar" Style="{StaticResource baseButton}" Command="local:CustomCommands.Salir"/>
             </Grid>
         </Grid>
     </DockPanel>

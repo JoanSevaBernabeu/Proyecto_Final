@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Proyecto
 {
     /// <summary>
-    /// Lógica de interacción para Tratamiento.xaml
+    /// Lógica de interacción para Aceptar.xaml
     /// </summary>
-    public partial class Tratamiento : Window
+    public partial class Aceptar : Window
     {
-        public Tratamiento()
+        public Aceptar()
         {
             InitializeComponent();
         }
