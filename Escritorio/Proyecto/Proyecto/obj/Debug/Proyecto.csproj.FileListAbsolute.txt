@@ -41,3 +41,7 @@ D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Habitaci
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\MedicoNuevo.baml
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\TratamientoNuevo.g.cs
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\TratamientoNuevo.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Aceptar.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Cancelar.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Aceptar.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Cancelar.baml

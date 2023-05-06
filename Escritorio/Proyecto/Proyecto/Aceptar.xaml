@@ -25,6 +25,6 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="TAREA COMPLETADA CON EXITO!"/>
-        <Button Grid.Row="1" Style="{StaticResource baseButton}" Content="Continuar" x:Name="aceptar_WindowButton"/>
+        <Button Grid.Row="1" Style="{StaticResource baseButton}" Content="Continuar" Click="aceptar_WindowButton_Click"/>
     </Grid>
 </Window>

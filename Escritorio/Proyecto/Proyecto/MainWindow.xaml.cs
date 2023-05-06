@@ -28,7 +28,9 @@ namespace Proyecto
 
         private void CommandBindingCancelar_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            Cancelar cancelar = new Cancelar();
+            cancelar.Owner = this;
+            cancelar.Show();
         }
         private void CommandBindingSalir_Executed(object sender, ExecutedRoutedEventArgs e)
         {

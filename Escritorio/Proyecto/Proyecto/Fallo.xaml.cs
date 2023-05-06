@@ -15,16 +15,16 @@ using System.Windows.Shapes;
 namespace Proyecto
 {
     /// <summary>
-    /// Lógica de interacción para Aceptar.xaml
+    /// Lógica de interacción para Fallo.xaml
     /// </summary>
-    public partial class Aceptar : Window
+    public partial class Fallo : Window
     {
-        public Aceptar()
+        public Fallo()
         {
             InitializeComponent();
         }
 
-        private void aceptar_WindowButton_Click(object sender, RoutedEventArgs e)
+        private void fallo_WindowButton_Click(object sender, RoutedEventArgs e)
         {
             SystemCommands.CloseWindow(this);
         }
