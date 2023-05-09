@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,17 +21,18 @@ namespace Proyecto
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        private MainWindowVM vm;
         public MainWindow()
         {
+            vm = new MainWindowVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
         }
 
         private void CommandBindingCancelar_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            Cancelar cancelar = new Cancelar();
-            cancelar.Owner = this;
-            cancelar.Show();
+            vm.cancelar();
         }
         private void CommandBindingSalir_Executed(object sender, ExecutedRoutedEventArgs e)
         {
@@ -38,27 +40,19 @@ namespace Proyecto
         }
         private void CommandBindingHabitacionNueva_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            HabitacionNueva habitacion_nueva = new HabitacionNueva();
-            habitacion_nueva.Owner = this;
-            habitacion_nueva.Show();
+            vm.habitacionNueva();
         }
         private void CommandBindingTratamientoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            TratamientoNuevo tratamiento_nuevo = new TratamientoNuevo();
-            tratamiento_nuevo.Owner = this;
-            tratamiento_nuevo.Show();
+            vm.tratamientoNuevo();
         }
         private void CommandBindingMedicamentoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MedicamentoNuevo medicamento_nuevo = new MedicamentoNuevo();
-            medicamento_nuevo.Owner = this;
-            medicamento_nuevo.Show();
+            vm.medicamentoNuevo();
         }
         private void CommandBindingMedicoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MedicoNuevo medico_nuevo = new MedicoNuevo();
-            medico_nuevo.Owner = this;
-            medico_nuevo.Show();
+            vm.medicoNuevo();
         }
     }
 }

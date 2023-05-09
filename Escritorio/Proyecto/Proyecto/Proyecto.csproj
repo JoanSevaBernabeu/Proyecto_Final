@@ -101,6 +101,7 @@
     <Compile Include="Fallo.xaml.cs">
       <DependentUpon>Fallo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="viewmodels\MainWindowVM.cs" />
     <Compile Include="vistas\HabitacionNueva.xaml.cs">
       <DependentUpon>HabitacionNueva.xaml</DependentUpon>
     </Compile>
