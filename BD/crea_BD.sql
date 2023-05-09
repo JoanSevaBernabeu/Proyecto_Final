@@ -23,7 +23,6 @@ CREATE TABLE medicamento(
 id varchar(255) NOT NULL,
 nombre varchar(255),
 cantidad integer,
-pedir boolean,
 intervalo integer,
 primary key(id)
 );

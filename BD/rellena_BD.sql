@@ -12,8 +12,8 @@ VALUES
 
 INSERT INTO medicamento 
 VALUES 
-('0876','ibuprofeno',100,false,8),
-('0877','paracetamol',20,true,8);
+('0876','ibuprofeno',100,8),
+('0877','paracetamol',20,8);
 
 INSERT INTO tratamiento
 VALUES

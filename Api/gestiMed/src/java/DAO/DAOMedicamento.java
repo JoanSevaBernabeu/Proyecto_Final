@@ -65,7 +65,7 @@ public class DAOMedicamento {
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
                 while(rs.next()){
-                    Medicamento medicamento = new Medicamento(rs.getString("id"),rs.getString("nombre"),rs.getInt("cantidad"),rs.getBoolean("pedir"),rs.getInt("intervalo"));
+                    Medicamento medicamento = new Medicamento(rs.getString("id"),rs.getString("nombre"),rs.getInt("cantidad"),rs.getInt("intervalo"));
                     ListaTratamiento tratamientos = getTratamientos(rs.getString("medicamento"));
                     medicamento.setTratamientoList(tratamientos.getLista());
                     lista.add(medicamento);
@@ -87,7 +87,7 @@ public class DAOMedicamento {
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
-                medicamento = new Medicamento(rs.getString("id"),rs.getString("nombre"),rs.getInt("cantidad"),rs.getBoolean("pedir"),rs.getInt("intervalo"));
+                medicamento = new Medicamento(rs.getString("id"),rs.getString("nombre"),rs.getInt("cantidad"),rs.getInt("intervalo"));
                 ListaTratamiento tratamientos = getTratamientos(rs.getString("medicamento"));
                 medicamento.setTratamientoList(tratamientos.getLista());
             }

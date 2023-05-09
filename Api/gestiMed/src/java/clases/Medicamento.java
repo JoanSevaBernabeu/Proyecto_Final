@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Medicamento.findById", query = "SELECT m FROM Medicamento m WHERE m.id = :id"),
     @NamedQuery(name = "Medicamento.findByNombre", query = "SELECT m FROM Medicamento m WHERE m.nombre = :nombre"),
     @NamedQuery(name = "Medicamento.findByCantidad", query = "SELECT m FROM Medicamento m WHERE m.cantidad = :cantidad"),
-    @NamedQuery(name = "Medicamento.findByPedir", query = "SELECT m FROM Medicamento m WHERE m.pedir = :pedir"),
     @NamedQuery(name = "Medicamento.findByIntervalo", query = "SELECT m FROM Medicamento m WHERE m.intervalo = :intervalo")})
 public class Medicamento implements Serializable {
 
@@ -48,8 +47,6 @@ public class Medicamento implements Serializable {
     private String nombre;
     @Column(name = "cantidad")
     private Integer cantidad;
-    @Column(name = "pedir")
-    private Boolean pedir;
     @Column(name = "intervalo")
     private Integer intervalo;
     @OneToMany(mappedBy = "medicamento")
@@ -62,11 +59,10 @@ public class Medicamento implements Serializable {
         this.id = id;
     }
 
-    public Medicamento(String id, String nombre, Integer cantidad, Boolean pedir, Integer intervalo) {
+    public Medicamento(String id, String nombre, Integer cantidad, Integer intervalo) {
         this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
-        this.pedir = pedir;
         this.intervalo = intervalo;
     }
 
@@ -94,14 +90,6 @@ public class Medicamento implements Serializable {
 
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
-    }
-
-    public Boolean getPedir() {
-        return pedir;
-    }
-
-    public void setPedir(Boolean pedir) {
-        this.pedir = pedir;
     }
 
     public Integer getIntervalo() {
