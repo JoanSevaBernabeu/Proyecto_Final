@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\App.xaml
-5-489556509
+111402443110
 
-21-894615502
+27-1183798914
 27-1825979797
-vistas\HabitacionNueva.xaml;MainWindow.xaml;vistas\MedicamentoNuevo.xaml;vistas\MedicoNuevo.xaml;vistas\TratamientoNuevo.xaml;
+vistas\EliminarHabitacion.xaml;vistas\EliminarMedicamento.xaml;vistas\EliminarMedico.xaml;vistas\EliminarPaciente.xaml;vistas\EliminarTratamiento.xaml;vistas\HabitacionNueva.xaml;MainWindow.xaml;vistas\MedicamentoNuevo.xaml;vistas\MedicoNuevo.xaml;vistas\PacienteNuevo.xaml;vistas\TratamientoNuevo.xaml;
 
 False
 

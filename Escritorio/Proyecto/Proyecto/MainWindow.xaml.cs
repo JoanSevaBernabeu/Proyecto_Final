@@ -70,21 +70,13 @@ namespace Proyecto
         {
             vm.eliminarMedico();
         }
-        private void salirButton_Click(object sender, RoutedEventArgs e)
+        private void CommandBindingPacienteNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            vm.cancelar();
+            vm.eliminarMedico();
         }
-
-        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        private void CommandBindingEliminarPaciente_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(SipTextBox.Text))
-            {
-                vm.error();
-            }
-            else
-            {
-                vm.aceptar();
-            }
+            vm.eliminarMedico();
         }
     }
 }

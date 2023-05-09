@@ -27,51 +27,12 @@
                         Executed="CommandBindingMedicoNuevo_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.EliminarMedico"
                         Executed="CommandBindingEliminarMedico_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.PacienteNuevo"
+                        Executed="CommandBindingPacienteNuevo_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.EliminarPaciente"
+                        Executed="CommandBindingEliminarPaciente_Executed"></CommandBinding>
     </Window.CommandBindings>
     <Window.Resources>
-        <Style TargetType="TextBlock" x:Key="baseTextBlock">
-            <Setter Property="HorizontalAlignment" Value="Right"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="20"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="enunciadoTextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="30"/>
-            <Setter Property="FontStyle" Value="Italic"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="tituloTextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="TextDecorations" Value="Underline"/>
-            <Setter Property="Grid.ColumnSpan" Value="2"/>
-        </Style>
-        <Style TargetType="TextBox" x:Key="baseTextBox">
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="ComboBox" x:Key="baseComboBox">
-            <Setter Property="Width" Value="110"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="Button" x:Key="baseButton">
-            <Setter Property="Width" Value="200"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="TextBox" x:Key="sintomasTextBox">
-            <Setter Property="Margin" Value="50"/>
-        </Style>
-        <Style TargetType="Border" x:Key="baseBorder">
-            <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Margin" Value="10"/>
-        </Style>
         <Style TargetType="MenuItem" x:Key="baseMenuItem">
             <Setter Property="Header" Value="_Cancelar"/>
             <Setter Property="InputGestureText" Value="Ctrl + C"/>
@@ -80,104 +41,31 @@
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Pacientes">
+                <MenuItem Header="Paciente nuevo..." InputGestureText="Ctrl + P" Command="local:CustomCommands.PacienteNuevo"/>
+                <MenuItem Header="Eliminar Paciente..." InputGestureText="Ctrl + N" Command="local:CustomCommands.EliminarPaciente"/>
+                <MenuItem Style="{StaticResource baseMenuItem}"/>
+            </MenuItem>
             <MenuItem Header="Habitaciones">
                 <MenuItem Header="_Habitacion nueva..." InputGestureText="Ctrl + H" Command="local:CustomCommands.HabNueva"/>
-                <MenuItem Header="Eliminar Habitacion" InputGestureText="Ctrl + A" Command="local:CustomCommands.EliminarHabitacion"/>
+                <MenuItem Header="Eliminar Habitacion..." InputGestureText="Ctrl + A" Command="local:CustomCommands.EliminarHabitacion"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Tratamiento">
                 <MenuItem Header="_Tratamiento nuevo..." InputGestureText="Ctrl + T" Command="local:CustomCommands.TratNuevo"/>
-                <MenuItem Header="Eliminar Tratamiento" InputGestureText="Ctrl + R" Command="local:CustomCommands.EliminarTratamiento"/>
+                <MenuItem Header="Eliminar Tratamiento..." InputGestureText="Ctrl + R" Command="local:CustomCommands.EliminarTratamiento"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicamentos">
                 <MenuItem Header="_Medicacion nueva..." InputGestureText="Ctrl + M" Command="local:CustomCommands.MedicamentoNuevo"/>
-                <MenuItem Header="Eliminar Medicacion" InputGestureText="Ctrl + D" Command="local:CustomCommands.EliminarMedicamento"/>
+                <MenuItem Header="Eliminar Medicacion..." InputGestureText="Ctrl + D" Command="local:CustomCommands.EliminarMedicamento"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicos">
                 <MenuItem Header="M_edico Nuevo..." InputGestureText="Ctrl + E" Command="local:CustomCommands.MedicoNuevo"/>
-                <MenuItem Header="Eliminar Medico" InputGestureText="Ctrl + I" Command="local:CustomCommands.EliminarMedico"/>
+                <MenuItem Header="Eliminar Medico..." InputGestureText="Ctrl + I" Command="local:CustomCommands.EliminarMedico"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.75*"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="0.25*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource baseBorder}">
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos personales"/>
-                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
-                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
-                    <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="SipTextBox"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}" x:Name="telefonoTextBox"/>
-                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
-                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="apellidoTextBox"/>
-                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="nacimientoTextBox"/>
-                </Grid>
-            </Border>
-            <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource baseBorder}">
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos hospitalarios"/>
-                    <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº habitacion: " />
-                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Tratamiento: "/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="numHabitacionTextBox"/>
-                    <ComboBox Grid.Column="1" Grid.Row="2" x:Name="tratamientoComboBox" Style="{StaticResource baseComboBox}"/>
-                    <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Urgencia: " />
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Medicos: "/>
-                    <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico" Style="{StaticResource baseButton}"/>
-                    <ComboBox Grid.Column="3" Grid.Row="1" x:Name="urgenciaComboBox" Style="{StaticResource baseComboBox}"/>
-                    <ComboBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" x:Name="medicoComboBox" Style="{StaticResource baseComboBox}"/>
-                </Grid>
-            </Border>
-            <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
-                <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="Sintomas" Style="{StaticResource enunciadoTextBlock}"/>
-                    <TextBox Style="{StaticResource sintomasTextBox}"/>
-                </DockPanel>
-            </Border>
-            <Grid Grid.Column="1" Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}" Click="aceptarButton_Click"/>
-                <Button Grid.Column="1" Content="Salir" Style="{StaticResource baseButton}" Click="salirButton_Click"/>
-            </Grid>
-        </Grid>
     </DockPanel>
 </Window>

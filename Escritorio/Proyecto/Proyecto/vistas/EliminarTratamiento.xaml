@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto.vistas"
         mc:Ignorable="d"
-        Title="EliminarTratamiento" Height="450" Width="800">
+        Title="EliminarTratamiento" Height="200" Width="400">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="baseTextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="baseTextBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+        <Style TargetType="Button" x:Key="baseButton">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseTextBlock}" Text="Introduzca el Nº de Habitacion: "/>
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseTextBox}" x:Name="numHabitacionTextBox"/>
+        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource baseButton}" Content="Aceptar"/>
+        <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource baseButton}" Content="Cancelar"/>
     </Grid>
 </Window>

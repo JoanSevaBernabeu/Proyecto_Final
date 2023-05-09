@@ -99,5 +99,23 @@ namespace Proyecto
                 new KeyGesture(Key.I,ModifierKeys.Control)
             }
             );
+        public static readonly RoutedUICommand PacienteNuevo = new RoutedUICommand(
+            "PacienteNuevo",
+            "PacienteNuevo",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.P,ModifierKeys.Control)
+            }
+            );
+        public static readonly RoutedUICommand EliminarPaciente = new RoutedUICommand(
+            "EliminarPaciente",
+            "EliminarPaciente",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.N,ModifierKeys.Control)
+            }
+            );
     }
 }

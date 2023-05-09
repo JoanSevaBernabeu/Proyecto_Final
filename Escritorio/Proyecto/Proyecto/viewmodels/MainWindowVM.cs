@@ -73,11 +73,23 @@ namespace Proyecto.viewmodels
             medicamento_nuevo.Owner = ventana;
             medicamento_nuevo.Show();
         }
+        public void eliminarMedicamento()
+        {
+            EliminarMedicamento eliminar_medicamento = new EliminarMedicamento();
+            eliminar_medicamento.Owner = ventana;
+            eliminar_medicamento.Show();
+        }
         public void medicoNuevo()
         {
             MedicoNuevo medico_nuevo = new MedicoNuevo();
             medico_nuevo.Owner = ventana;
             medico_nuevo.Show();
+        }
+        public void eliminarMedico()
+        {
+            EliminarMedico eliminar_medico = new EliminarMedico();
+            eliminar_medico.Owner = ventana;
+            eliminar_medico.Show();
         }
         public void setVentana(MainWindow ventana)
         {

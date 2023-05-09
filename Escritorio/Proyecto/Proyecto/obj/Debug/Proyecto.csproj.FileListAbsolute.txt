@@ -43,3 +43,15 @@ D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\H
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\MedicamentoNuevo.baml
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\MedicoNuevo.baml
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\TratamientoNuevo.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarHabitacion.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarMedicamento.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarMedico.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarTratamiento.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarHabitacion.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarMedicamento.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarMedico.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarTratamiento.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarPaciente.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\PacienteNuevo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\EliminarPaciente.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\PacienteNuevo.baml
