@@ -74,18 +74,22 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Habitaciones">
                 <MenuItem Header="_Habitacion nueva..." InputGestureText="Ctrl + H" Command="local:CustomCommands.HabNueva"/>
+                <MenuItem Header="Eliminar Habitacion"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Tratamiento">
                 <MenuItem Header="_Tratamiento nuevo..." InputGestureText="Ctrl + T" Command="local:CustomCommands.TratNuevo"/>
+                <MenuItem Header="Eliminar Tratamiento"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicamentos">
                 <MenuItem Header="_Medicacion nueva..." InputGestureText="Ctrl + M" Command="local:CustomCommands.MedicamentoNuevo"/>
+                <MenuItem Header="Eliminar Medicacion"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicos">
                 <MenuItem Header="M_edico Nuevo..." InputGestureText="Ctrl + E" Command="local:CustomCommands.MedicoNuevo"/>
+                <MenuItem Header="Eliminar Medico"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
@@ -117,14 +121,13 @@
                     <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nombre: " />
                     <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Nº SIP:"/>
                     <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource baseTextBlock}" Text="Tlf contacto:"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="SipTextBox"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}" x:Name="telefonoTextBox"/>
                     <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
                     <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
-                    <TextBlock Grid.Column="2" Grid.Row="3" Style="{StaticResource baseTextBlock}"/>
-                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="apellidoTextBox"/>
+                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="nacimientoTextBox"/>
                 </Grid>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource baseBorder}">
@@ -144,7 +147,7 @@
                     <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource enunciadoTextBlock}" Text="Datos hospitalarios"/>
                     <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº habitacion: " />
                     <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Tratamiento: "/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="numHabitacionTextBox"/>
                     <ComboBox Grid.Column="1" Grid.Row="2" x:Name="tratamientoComboBox" Style="{StaticResource baseComboBox}"/>
                     <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Urgencia: " />
                     <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Medicos: "/>
@@ -164,8 +167,8 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}"/>
-                <Button Grid.Column="1" Content="Cancelar" Style="{StaticResource baseButton}" Command="local:CustomCommands.Salir"/>
+                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}" Click="aceptarButton_Click"/>
+                <Button Grid.Column="1" Content="Salir" Style="{StaticResource baseButton}" Click="salirButton_Click"/>
             </Grid>
         </Grid>
     </DockPanel>

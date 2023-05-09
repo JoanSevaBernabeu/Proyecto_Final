@@ -72,6 +72,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -90,18 +91,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Aceptar.xaml.cs">
-      <DependentUpon>Aceptar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Cancelar.xaml.cs">
-      <DependentUpon>Cancelar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="clases\Habitacion.cs" />
     <Compile Include="CustomCommands.cs" />
-    <Compile Include="Fallo.xaml.cs">
-      <DependentUpon>Fallo.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="viewmodels\HabitacionNuevaVM.cs" />
     <Compile Include="viewmodels\MainWindowVM.cs" />
+    <Compile Include="viewmodels\MedicamentoNuevoVM.cs" />
+    <Compile Include="viewmodels\MedicoNuevoVM.cs" />
+    <Compile Include="viewmodels\TratamientoNuevoVM.cs" />
     <Compile Include="vistas\HabitacionNueva.xaml.cs">
       <DependentUpon>HabitacionNueva.xaml</DependentUpon>
     </Compile>
@@ -115,18 +111,6 @@
     <Compile Include="vistas\TratamientoNuevo.xaml.cs">
       <DependentUpon>TratamientoNuevo.xaml</DependentUpon>
     </Compile>
-    <Page Include="Aceptar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Cancelar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Fallo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="vistas\HabitacionNueva.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

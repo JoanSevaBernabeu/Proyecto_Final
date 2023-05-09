@@ -54,5 +54,22 @@ namespace Proyecto
         {
             vm.medicoNuevo();
         }
+
+        private void salirButton_Click(object sender, RoutedEventArgs e)
+        {
+            vm.cancelar();
+        }
+
+        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(SipTextBox.Text))
+            {
+                vm.error();
+            }
+            else
+            {
+                vm.aceptar();
+            }
+        }
     }
 }

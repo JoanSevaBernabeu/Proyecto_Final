@@ -36,6 +36,15 @@ namespace Proyecto
                 new KeyGesture(Key.H,ModifierKeys.Control)
             }
             );
+        public static readonly RoutedUICommand EliminarHabitacion = new RoutedUICommand(
+            "EliminarHabitacion",
+            "EliminarHabitacion",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.A,ModifierKeys.Control)
+            }
+            );
         public static readonly RoutedUICommand TratNuevo = new RoutedUICommand(
             "TratNuevo",
             "TratNuevo",
@@ -43,6 +52,15 @@ namespace Proyecto
             new InputGestureCollection
             {
                 new KeyGesture(Key.T,ModifierKeys.Control)
+            }
+            );
+        public static readonly RoutedUICommand EliminarTratamiento = new RoutedUICommand(
+            "EliminarTratamiento",
+            "EliminarTratamiento",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.R,ModifierKeys.Control)
             }
             );
         public static readonly RoutedUICommand MedicamentoNuevo = new RoutedUICommand(
@@ -54,6 +72,15 @@ namespace Proyecto
                 new KeyGesture(Key.M,ModifierKeys.Control)
             }
             );
+        public static readonly RoutedUICommand EliminarMedicamento = new RoutedUICommand(
+            "EliminarMedicamento",
+            "EliminarMedicamento",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.D,ModifierKeys.Control)
+            }
+            );
         public static readonly RoutedUICommand MedicoNuevo = new RoutedUICommand(
             "MedicoNuevo",
             "MedicoNuevo",
@@ -63,6 +90,14 @@ namespace Proyecto
                 new KeyGesture(Key.E,ModifierKeys.Control)
             }
             );
-
+        public static readonly RoutedUICommand EliminarMedico = new RoutedUICommand(
+            "EliminarMedico",
+            "EliminarMedico",
+            typeof(CustomCommands),
+            new InputGestureCollection
+            {
+                new KeyGesture(Key.I,ModifierKeys.Control)
+            }
+            );
     }
 }
