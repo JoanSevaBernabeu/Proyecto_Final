@@ -50,7 +50,9 @@ namespace Proyecto
         }
         private void CommandBindingMedicamentoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            
+            MedicamentoNuevo medicamento_nuevo = new MedicamentoNuevo();
+            medicamento_nuevo.Owner = this;
+            medicamento_nuevo.Show();
         }
         private void CommandBindingMedicoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
