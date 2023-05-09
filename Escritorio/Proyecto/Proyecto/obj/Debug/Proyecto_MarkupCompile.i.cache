@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\App.xaml
-8-753974559
+8-1399188937
 
-20-1737870534
+20-1348164165
 26-2040366533
-Aceptar.xaml;Cancelar.xaml;Fallo.xaml;HabitacionNueva.xaml;MainWindow.xaml;MedicamentoNuevo.xaml;MedicoNuevo.xaml;TratamientoNuevo.xaml;
+Aceptar.xaml;Cancelar.xaml;Fallo.xaml;vistas\HabitacionNueva.xaml;MainWindow.xaml;vistas\MedicamentoNuevo.xaml;vistas\MedicoNuevo.xaml;vistas\TratamientoNuevo.xaml;
 
-True
+False
 

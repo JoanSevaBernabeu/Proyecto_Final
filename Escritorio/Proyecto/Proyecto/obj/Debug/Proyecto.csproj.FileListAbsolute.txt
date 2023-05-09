@@ -45,3 +45,9 @@ D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Aceptar.
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Cancelar.g.cs
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Aceptar.baml
 D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Cancelar.baml
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\Fallo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\MedicamentoNuevo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\HabitacionNueva.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\MedicamentoNuevo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\MedicoNuevo.g.cs
+D:\Proyecto_Final\Proyecto_Final\Escritorio\Proyecto\Proyecto\obj\Debug\vistas\TratamientoNuevo.g.cs

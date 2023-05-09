@@ -101,17 +101,17 @@
     <Compile Include="Fallo.xaml.cs">
       <DependentUpon>Fallo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HabitacionNueva.xaml.cs">
+    <Compile Include="vistas\HabitacionNueva.xaml.cs">
       <DependentUpon>HabitacionNueva.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MedicamentoNuevo.xaml.cs">
+    <Compile Include="vistas\MedicamentoNuevo.xaml.cs">
       <DependentUpon>MedicamentoNuevo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MedicoNuevo.xaml.cs">
+    <Compile Include="vistas\MedicoNuevo.xaml.cs">
       <DependentUpon>MedicoNuevo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Servicio.cs" />
-    <Compile Include="TratamientoNuevo.xaml.cs">
+    <Compile Include="vistas\TratamientoNuevo.xaml.cs">
       <DependentUpon>TratamientoNuevo.xaml</DependentUpon>
     </Compile>
     <Page Include="Aceptar.xaml">
@@ -126,7 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HabitacionNueva.xaml">
+    <Page Include="vistas\HabitacionNueva.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,15 +146,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MedicamentoNuevo.xaml">
+    <Page Include="vistas\MedicamentoNuevo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MedicoNuevo.xaml">
+    <Page Include="vistas\MedicoNuevo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TratamientoNuevo.xaml">
+    <Page Include="vistas\TratamientoNuevo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
