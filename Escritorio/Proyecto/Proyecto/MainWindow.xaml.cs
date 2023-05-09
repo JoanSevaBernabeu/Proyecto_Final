@@ -42,19 +42,34 @@ namespace Proyecto
         {
             vm.habitacionNueva();
         }
+        private void CommandBindingEliminarHabitacion_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            vm.eliminarHabitacion();
+        }
         private void CommandBindingTratamientoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             vm.tratamientoNuevo();
+        }
+        private void CommandBindingEliminarTratamiento_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            vm.eliminarTratamiento();
         }
         private void CommandBindingMedicamentoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             vm.medicamentoNuevo();
         }
+        private void CommandBindingEliminarMedicamento_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            vm.eliminarMedicamento();
+        }
         private void CommandBindingMedicoNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             vm.medicoNuevo();
         }
-
+        private void CommandBindingEliminarMedico_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            vm.eliminarMedico();
+        }
         private void salirButton_Click(object sender, RoutedEventArgs e)
         {
             vm.cancelar();

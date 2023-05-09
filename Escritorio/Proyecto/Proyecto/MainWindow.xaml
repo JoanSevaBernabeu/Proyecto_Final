@@ -13,12 +13,20 @@
                         Executed="CommandBindingSalir_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.HabNueva"
                         Executed="CommandBindingHabitacionNueva_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.EliminarHabitacion"
+                        Executed="CommandBindingEliminarHabitacion_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.TratNuevo"
                         Executed="CommandBindingTratamientoNuevo_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.EliminarTratamiento"
+                        Executed="CommandBindingEliminarTratamiento_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.MedicamentoNuevo"
                         Executed="CommandBindingMedicamentoNuevo_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.EliminarMedicamento"
+                        Executed="CommandBindingEliminarMedicamento_Executed"></CommandBinding>
         <CommandBinding Command="local:CustomCommands.MedicoNuevo"
                         Executed="CommandBindingMedicoNuevo_Executed"></CommandBinding>
+        <CommandBinding Command="local:CustomCommands.EliminarMedico"
+                        Executed="CommandBindingEliminarMedico_Executed"></CommandBinding>
     </Window.CommandBindings>
     <Window.Resources>
         <Style TargetType="TextBlock" x:Key="baseTextBlock">
@@ -74,22 +82,22 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Habitaciones">
                 <MenuItem Header="_Habitacion nueva..." InputGestureText="Ctrl + H" Command="local:CustomCommands.HabNueva"/>
-                <MenuItem Header="Eliminar Habitacion"/>
+                <MenuItem Header="Eliminar Habitacion" InputGestureText="Ctrl + A" Command="local:CustomCommands.EliminarHabitacion"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Tratamiento">
                 <MenuItem Header="_Tratamiento nuevo..." InputGestureText="Ctrl + T" Command="local:CustomCommands.TratNuevo"/>
-                <MenuItem Header="Eliminar Tratamiento"/>
+                <MenuItem Header="Eliminar Tratamiento" InputGestureText="Ctrl + R" Command="local:CustomCommands.EliminarTratamiento"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicamentos">
                 <MenuItem Header="_Medicacion nueva..." InputGestureText="Ctrl + M" Command="local:CustomCommands.MedicamentoNuevo"/>
-                <MenuItem Header="Eliminar Medicacion"/>
+                <MenuItem Header="Eliminar Medicacion" InputGestureText="Ctrl + D" Command="local:CustomCommands.EliminarMedicamento"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
             <MenuItem Header="Medicos">
                 <MenuItem Header="M_edico Nuevo..." InputGestureText="Ctrl + E" Command="local:CustomCommands.MedicoNuevo"/>
-                <MenuItem Header="Eliminar Medico"/>
+                <MenuItem Header="Eliminar Medico" InputGestureText="Ctrl + I" Command="local:CustomCommands.EliminarMedico"/>
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>

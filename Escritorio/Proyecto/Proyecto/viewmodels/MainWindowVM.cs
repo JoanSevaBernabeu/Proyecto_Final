@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,11 +49,23 @@ namespace Proyecto.viewmodels
             habitacion_nueva.Owner = ventana;
             habitacion_nueva.Show();
         }
+        public void eliminarHabitacion()
+        {
+            EliminarHabitacion eliminar_habitacion = new EliminarHabitacion();
+            eliminar_habitacion.Owner = ventana;
+            eliminar_habitacion.Show();
+        }
         public void tratamientoNuevo()
         {
             TratamientoNuevo tratamiento_nuevo = new TratamientoNuevo();
             tratamiento_nuevo.Owner = ventana;
             tratamiento_nuevo.Show();
+        }
+        public void eliminarTratamiento()
+        {
+            EliminarTratamiento eliminar_tratamiento = new EliminarTratamiento();
+            eliminar_tratamiento.Owner = ventana;
+            eliminar_tratamiento.Show();
         }
         public void medicamentoNuevo()
         {
