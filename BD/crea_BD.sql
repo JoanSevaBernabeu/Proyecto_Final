@@ -13,7 +13,7 @@ primary key(dni)
 );
 
 CREATE TABLE habitacion(
-numHabitacion tinyint NOT NULL,
+numHabitacion varchar(255),
 numCamasDisp tinyint,
 numCamasOcu tinyint,
 primary key(numHabitacion)

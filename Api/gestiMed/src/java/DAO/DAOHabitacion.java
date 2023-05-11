@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import listas.ListaHabitaciones;
 
 /**
@@ -60,9 +61,9 @@ public class DAOHabitacion {
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
-                habitacion.setNumHabitacion(rs.getShort("numHabitacion"));
-                habitacion.setOcupada(rs.getBoolean("habLlena"));
-                habitacion.setHabOcupadas(rs.getShort("habOcupadas"));
+                habitacion.setNumHabitacion(rs.getString("numHabitacion"));
+                habitacion.setCamDisponibles(rs.getShort("numCamasDisp"));
+                habitacion.setCamOcupadas(rs.getShort("numCamasOcu"));
             }
         }catch(SQLException ex){
             Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
@@ -87,5 +88,49 @@ public class DAOHabitacion {
         }
         desconectar();
         return lista;
+    }
+    public static boolean existe(String id){
+        boolean existe = false;
+        ListaHabitaciones lista = obtenerHabitaciones();
+        ArrayList<Habitacion> habitaciones = lista.getLista();
+        for(Habitacion hab: habitaciones){
+            if(hab.getNumHabitacion().equals(id)){
+                existe= true;
+            }
+        }
+        return existe;
+    }
+    public static boolean postHabitacion(Habitacion habitacion)
+    {
+        Statement statement = null;
+        boolean ok = false;
+        conectar();
+        try{
+            if(existe(habitacion.getNumHabitacion())){
+                ok = true;
+                String sentencia = "INSERT INTO habitacion VALUES ('"+habitacion.getNumHabitacion()+"',"+habitacion.getCamDisponibles()+","+habitacion.getCamOcupadas()+";";
+                ResultSet rs = statement.executeQuery(sentencia);
+            }
+        }catch(SQLException ex){
+            Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+        return ok;
+    }
+    public static boolean deleteHabitacion(String id){
+        Statement statement = null;
+        boolean ok = false;
+        conectar();
+        try{
+            if(existe(id)){
+                ok = true;
+                String sentencia = "DELETE FROM habitacion WHERE numHabitacion LIKE '"+id+"';";
+                ResultSet rs = statement.executeQuery(sentencia);
+            }
+        }catch(SQLException ex){
+            Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+        return ok;
     }
 }

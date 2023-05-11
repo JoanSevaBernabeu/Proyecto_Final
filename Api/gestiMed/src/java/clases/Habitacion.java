@@ -37,37 +37,52 @@ public class Habitacion implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "numHabitacion")
-    private Short numHabitacion;
-    @Column(name = "camOcupadas")
+    private String numHabitacion;
+    @Column(name = "numcamDisp")
+    private Short camDisponibles;
+    @Column(name = "numcamOcu")
     private Short camOcupadas;
-    @Column(name="habLlena")
-    private boolean ocupada;
     @OneToMany(mappedBy = "numHabitacion")
     private List<Paciente> pacienteList;
 
     public Habitacion() {
     }
 
-    public Habitacion(Short numHabitacion) {
+    public Habitacion(String numHabitacion) {
         this.numHabitacion = numHabitacion;
     }
 
-    public Short getNumHabitacion() {
+    public Habitacion(String numHabitacion, Short camDisponibles, Short camOcupadas) {
+        this.numHabitacion = numHabitacion;
+        this.camDisponibles = camDisponibles;
+        this.camOcupadas = camOcupadas;
+    }
+    
+
+    public String getNumHabitacion() {
         return numHabitacion;
     }
 
-    public void setNumHabitacion(Short numHabitacion) {
+    public void setNumHabitacion(String numHabitacion) {
         this.numHabitacion = numHabitacion;
     }
 
-    public Short getHabOcupadas() {
+    public Short getCamDisponibles() {
+        return camDisponibles;
+    }
+
+    public void setCamDisponibles(Short camDisponibles) {
+        this.camDisponibles = camDisponibles;
+    }
+
+    public Short getCamOcupadas() {
         return camOcupadas;
     }
 
-    public void setHabOcupadas(Short habOcupadas) {
-        this.camOcupadas = habOcupadas;
+    public void setCamOcupadas(Short camOcupadas) {
+        this.camOcupadas = camOcupadas;
     }
-
+    
     @XmlTransient
     public List<Paciente> getPacienteList() {
         return pacienteList;
@@ -102,12 +117,6 @@ public class Habitacion implements Serializable {
         return "clases.Habitacion[ numHabitacion=" + numHabitacion + " ]";
     }
 
-    public boolean isOcupada() {
-        return ocupada;
-    }
-
-    public void setOcupada(boolean ocupada) {
-        this.ocupada = ocupada;
-    }
+    
     
 }

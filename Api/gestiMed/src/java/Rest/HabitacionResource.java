@@ -7,7 +7,9 @@ package Rest;
 
 import DAO.DAOHabitacion;
 import clases.Habitacion;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -47,4 +49,16 @@ public class HabitacionResource {
         response = Response.status(Response.Status.OK).entity(lista).build();
         return response;
     }
+    @POST
+    @Path("nueva")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response postHabitacion(Habitacion habitacion){
+        Response response = null;
+        
+        boolean exito = DAOHabitacion.postHabitacion(habitacion);
+        if(exito == true) response = Response.status(Response.Status.CREATED).build();
+        //else response = Response.status(Response.Status.)
+        return response;
+    }
+    
 }
