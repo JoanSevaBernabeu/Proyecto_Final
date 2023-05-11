@@ -118,6 +118,28 @@ public class DAOMedicamento {
         desconectar();
         return tratamientos;
     }
-    
+    public static void postMedicamento(Medicamento medicamento){
+        Statement statement = null;
+        conectar();
+        try{
+            statement = con.createStatement();
+            String post = "INSERT INTO medicamento VALUES ('"+medicamento.getId()+"','"+medicamento.getNombre()+"',"+medicamento.getCantidad()+","+medicamento.getIntervalo()+");";
+            ResultSet rs = statement.executeQuery(post);
+        }catch(SQLException ex){
+            Logger.getLogger(DAOMedicamento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
+    public static void deleteMedicamento(String id){
+        Statement statement = null;
+        conectar();
+        try{
+            statement = con.createStatement();
+            String delete = "DELETE FROM medicamento WHERE id LIKE '"+ id + "'";
+        }catch(SQLException ex){
+            Logger.getLogger(DAOMedicamento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
 
 }
