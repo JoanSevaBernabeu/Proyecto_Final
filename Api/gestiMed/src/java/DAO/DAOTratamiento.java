@@ -91,4 +91,32 @@ public class DAOTratamiento {
         desconectar();
         return tratamiento;
     }
+    
+    public static void tratamientoPost(Tratamiento tratamiento){
+        Statement statement = null;
+        Medicamento medicamento = tratamiento.getMedicamento();
+        conectar();
+        try{
+            statement = con.createStatement();
+            String creaTratamiento = "INSERT INTO Tratamiento VALUES('"+tratamiento.getNombre()+"','"+tratamiento.getDescripcion()+"','"+tratamiento.getSolucion()+"','"+medicamento.getId()+"');";
+            ResultSet rs = statement.executeQuery(creaTratamiento);
+            
+        }catch(SQLException ex){
+            Logger.getLogger(DAOTratamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
+    
+    public static void tratamientoDelete(String nombre){
+        Statement statement = null;
+        conectar();
+        try{
+            statement = con.createStatement();
+            String delete = "DELETE FROM Tratamiento WHERE nombre LIKE '%"+nombre+"%'";
+            ResultSet rs = statement.executeQuery(delete);
+        }catch(SQLException ex){
+            Logger.getLogger(DAOTratamiento.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
 }

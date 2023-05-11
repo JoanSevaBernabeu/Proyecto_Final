@@ -7,7 +7,10 @@ package Rest;
 
 import DAO.DAOTratamiento;
 import clases.Tratamiento;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -52,4 +55,27 @@ public class TratamientoResource {
         
         return response;
     }
+    @POST
+    @Path("nuevo")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response postTratamiento(Tratamiento tratamiento){
+        Response response;
+        
+        DAOTratamiento.tratamientoPost(tratamiento);
+        response = Response.status(Response.Status.CREATED).build();
+        
+        return response;
+    }
+    
+    @DELETE
+    @Path("delete/{nombre}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Response deleteTratamiento(@PathParam("nombre") String nombre){
+        Response response;
+        
+        DAOTratamiento.tratamientoDelete(nombre);
+        response = Response.status(Response.Status.OK).build();
+        return response;
+    }
+    
 }
