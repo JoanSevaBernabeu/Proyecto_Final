@@ -8,6 +8,7 @@ package Rest;
 import DAO.DAOHabitacion;
 import clases.Habitacion;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -55,9 +56,17 @@ public class HabitacionResource {
     public Response postHabitacion(Habitacion habitacion){
         Response response = null;
         
-        boolean exito = DAOHabitacion.postHabitacion(habitacion);
-        if(exito == true) response = Response.status(Response.Status.CREATED).build();
-        //else response = Response.status(Response.Status.)
+        DAOHabitacion.postHabitacion(habitacion);
+        response = Response.status(Response.Status.CREATED).build();
+        return response;
+    }
+    @DELETE
+    @Path("delete/{numHabitacion}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public Response deleteHabitacion(@PathParam("numHabitacion") String numHabitacion){
+        Response response;
+        DAOHabitacion.deleteHabitacion(numHabitacion);
+        response = Response.status(Response.Status.OK).build();
         return response;
     }
     

@@ -89,44 +89,26 @@ public class DAOHabitacion {
         desconectar();
         return lista;
     }
-    public static boolean existe(String id){
-        boolean existe = false;
-        ListaHabitaciones lista = obtenerHabitaciones();
-        ArrayList<Habitacion> habitaciones = lista.getLista();
-        for(Habitacion hab: habitaciones){
-            if(hab.getNumHabitacion().equals(id)){
-                existe= true;
-            }
-        }
-        return existe;
-    }
-    public static boolean postHabitacion(Habitacion habitacion)
+    public static void postHabitacion(Habitacion habitacion)
     {
         Statement statement = null;
-        boolean ok = false;
         conectar();
         try{
-            if(existe(habitacion.getNumHabitacion())){
-                ok = true;
-                String sentencia = "INSERT INTO habitacion VALUES ('"+habitacion.getNumHabitacion()+"',"+habitacion.getCamDisponibles()+","+habitacion.getCamOcupadas()+";";
-                ResultSet rs = statement.executeQuery(sentencia);
-            }
+            String sentencia = "INSERT INTO habitacion VALUES ('"+habitacion.getNumHabitacion()+"',"+habitacion.getCamDisponibles()+","+habitacion.getCamOcupadas()+";";
+            ResultSet rs = statement.executeQuery(sentencia);
+            
         }catch(SQLException ex){
             Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }
         desconectar();
-        return ok;
     }
     public static boolean deleteHabitacion(String id){
         Statement statement = null;
         boolean ok = false;
         conectar();
         try{
-            if(existe(id)){
-                ok = true;
-                String sentencia = "DELETE FROM habitacion WHERE numHabitacion LIKE '"+id+"';";
-                ResultSet rs = statement.executeQuery(sentencia);
-            }
+            String sentencia = "DELETE FROM habitacion WHERE numHabitacion LIKE '"+id+"';";
+            ResultSet rs = statement.executeQuery(sentencia);   
         }catch(SQLException ex){
             Logger.getLogger(DAOHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }
