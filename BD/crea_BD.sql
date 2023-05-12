@@ -44,7 +44,7 @@ numContacto varchar(255),
 nacimiento datetime,
 tratamiento varchar(255),
 urgencia varchar(255),
-numHabitacion tinyint,
+numHabitacion varchar(255),
 primary key(sip),
 foreign key(tratamiento) references tratamiento(nombre),
 foreign key(numHabitacion) references habitacion(numHabitacion)
@@ -57,7 +57,3 @@ primary key(dni_medico, sip_paciente),
 foreign key (dni_medico) references medico(dni),
 foreign key (sip_paciente) references paciente(sip)
 );
-
-drop schema gestimed;
-
-
