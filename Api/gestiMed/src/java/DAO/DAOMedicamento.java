@@ -83,7 +83,7 @@ public class DAOMedicamento {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM medicamento WHERE id LIKE '%"+id+"%'";
+            String sentencia = "SELECT * FROM medicamento WHERE id LIKE '"+id+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -103,7 +103,7 @@ public class DAOMedicamento {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM tratamiento WHERE medicamento LIKE '%"+medicamento+"%'";
+            String sentencia = "SELECT * FROM tratamiento WHERE medicamento LIKE '"+medicamento+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){

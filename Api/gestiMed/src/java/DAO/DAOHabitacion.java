@@ -57,7 +57,7 @@ public class DAOHabitacion {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM habitacion WHERE numHabitacion LIKE '%" +numHabitacion+"%'";
+            String sentencia = "SELECT * FROM habitacion WHERE numHabitacion LIKE '" +numHabitacion+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){

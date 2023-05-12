@@ -89,7 +89,7 @@ public class DAOPaciente {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM Paciente WHERE sip LIKE '%"+sip+"%'";
+            String sentencia = "SELECT * FROM Paciente WHERE sip LIKE '"+sip+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -116,7 +116,7 @@ public class DAOPaciente {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM trata WHERE sip_paciente LIKE '%"+sip+"%'";
+            String sentencia = "SELECT * FROM trata WHERE sip_paciente LIKE '"+sip+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -168,7 +168,7 @@ public class DAOPaciente {
         conectar();
         try{
             statement = con.createStatement();
-            String delete = "DELETE FROM paciente WHERE sip LIKE '%"+sip+"%'";
+            String delete = "DELETE FROM paciente WHERE sip LIKE '"+sip+"';";
             ResultSet rs = statement.executeQuery(delete);
             deleteTrata(sip);
             deleteCura(sip);
@@ -181,13 +181,13 @@ public class DAOPaciente {
     public static void deleteTrata(String sip) throws SQLException{
         Statement statement = con.createStatement();
         
-        String delete = "DELETE FROM trata WHERE sip_paciente LIKE '%"+sip+"%'";
+        String delete = "DELETE FROM trata WHERE sip_paciente LIKE '"+sip+"'";
         ResultSet rs = statement.executeQuery(delete);
     }
     
     public static void deleteCura(String sip) throws SQLException{
         Statement statement = con.createStatement();
-        String delete = "DELETE FROM cura WHERE sip_paciente LIKE '%"+sip+"%'";
+        String delete = "DELETE FROM cura WHERE sip_paciente LIKE '"+sip+"'";
         ResultSet rs = statement.executeQuery(delete);
     }
 }

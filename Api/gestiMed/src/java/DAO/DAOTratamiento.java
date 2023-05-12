@@ -77,7 +77,7 @@ public class DAOTratamiento {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM tratamiento WHERE nombre LIKE '%"+nombre+"%'";
+            String sentencia = "SELECT * FROM tratamiento WHERE nombre LIKE '"+nombre+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -112,7 +112,7 @@ public class DAOTratamiento {
         conectar();
         try{
             statement = con.createStatement();
-            String delete = "DELETE FROM Tratamiento WHERE nombre LIKE '%"+nombre+"%'";
+            String delete = "DELETE FROM Tratamiento WHERE nombre LIKE '"+nombre+"'";
             ResultSet rs = statement.executeQuery(delete);
         }catch(SQLException ex){
             Logger.getLogger(DAOTratamiento.class.getName()).log(Level.SEVERE, null, ex);

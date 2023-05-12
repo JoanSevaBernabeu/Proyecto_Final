@@ -84,7 +84,7 @@ public class DAOMedico {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM medico WHERE turno LIKE '%" + turno + "%'";
+            String sentencia = "SELECT * FROM medico WHERE turno LIKE '" + turno + "'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -108,7 +108,7 @@ public class DAOMedico {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM medico WHERE dni LIKE '%" + dni + "%'";
+            String sentencia = "SELECT * FROM medico WHERE dni LIKE '" + dni + "'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -128,7 +128,7 @@ public class DAOMedico {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "SELECT * FROM cura WHERE dni_enfermero LIKE '%"+dni+"%'";
+            String sentencia = "SELECT * FROM cura WHERE dni_enfermero LIKE '"+dni+"'";
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
@@ -143,5 +143,28 @@ public class DAOMedico {
         desconectar();
         return lista;
     }
-
+    public static void medicoPost(Medico medico){
+        Statement statement = null;
+        conectar();
+        try{
+            statement = con.createStatement();
+            String insertaMedico = "INSERT INTO medico VALUES ('"+medico.getDni()+"','"+medico.getNombre()+"','"+medico.getApellidos()+"','"+medico.getEmail()+"','"+medico.getContrasenya()+"','"+medico.getNumContacto()+"';";
+            ResultSet rs = statement.executeQuery(insertaMedico);
+        }catch(SQLException ex){
+            Logger.getLogger(DAOMedico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
+    public static void medicoDelete(String dni){
+        Statement statement = null;
+        conectar();
+        try{
+            statement = con.createStatement();
+            String deleteMedico = "DELETE FROM medico WHERE dni LIKE '"+dni+"';";
+            ResultSet rs = statement.executeQuery(deleteMedico);
+        }catch(SQLException ex){
+            Logger.getLogger(DAOMedico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        desconectar();
+    }
 }
