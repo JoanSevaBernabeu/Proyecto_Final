@@ -15,7 +15,7 @@ namespace Proyecto
         string ruta;
         public Servicio()
         {
-            ruta = "http://localhost:8081/gestimed/gestimed";
+            ruta = "http://localhost:8081/gestimed/gestimed2";
         }
         public ObservableCollection<Medico> getMedicosTurno(string turno)
         {
