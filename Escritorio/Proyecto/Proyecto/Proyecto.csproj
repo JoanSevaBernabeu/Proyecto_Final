@@ -93,6 +93,11 @@
     </ApplicationDefinition>
     <Compile Include="clases\Habitacion.cs" />
     <Compile Include="CustomCommands.cs" />
+    <Compile Include="servicios\HabitacionService.cs" />
+    <Compile Include="servicios\MedicamentoService.cs" />
+    <Compile Include="servicios\MedicoService.cs" />
+    <Compile Include="servicios\PacienteService.cs" />
+    <Compile Include="servicios\TratamientoService.cs" />
     <Compile Include="viewmodels\HabitacionNuevaVM.cs" />
     <Compile Include="viewmodels\MainWindowVM.cs" />
     <Compile Include="viewmodels\MedicamentoNuevoVM.cs" />
@@ -213,5 +218,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
