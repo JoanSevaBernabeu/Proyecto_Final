@@ -127,7 +127,6 @@
     <Compile Include="vistas\MedicoNuevo.xaml.cs">
       <DependentUpon>MedicoNuevo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Servicio.cs" />
     <Compile Include="vistas\PacienteNuevo.xaml.cs">
       <DependentUpon>PacienteNuevo.xaml</DependentUpon>
     </Compile>
