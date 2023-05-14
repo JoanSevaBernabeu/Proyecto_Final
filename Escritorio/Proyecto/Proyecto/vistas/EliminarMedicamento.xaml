@@ -36,8 +36,8 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseTextBlock}" Text="Introduzca el ID del medicamento: "/>
-        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseTextBox}" x:Name="numHabitacionTextBox"/>
-        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource baseButton}" Content="Aceptar"/>
-        <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource baseButton}" Content="Cancelar"/>
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseTextBox}" x:Name="idTextBox"/>
+        <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>

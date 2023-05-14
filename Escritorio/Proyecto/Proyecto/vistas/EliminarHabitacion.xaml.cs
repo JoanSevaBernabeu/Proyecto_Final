@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,18 +20,23 @@ namespace Proyecto.vistas
     /// </summary>
     public partial class EliminarHabitacion : Window
     {
+        private EliminarHabitacionVM vm;
         public EliminarHabitacion()
         {
+            vm = new EliminarHabitacionVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
         }
 
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            string numero = numHabitacionTextBox.Text;
+            vm.aceptar(numero);
         }
         private void cancelarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            vm.cancelar();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Proyecto.servicios
             ruta = "http://localhost:8085/gestimed/gestiMed/medicamento";
         }
 
-        public ObservableCollection<Medicamento> getAllHabitaciones()
+        public ObservableCollection<Medicamento> getAllMedicamentos()
         {
             var client = new RestClient(ruta);
             var request = new RestRequest(Method.GET);
