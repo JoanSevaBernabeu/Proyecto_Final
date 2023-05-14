@@ -44,14 +44,13 @@
         <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="DNI: "/>
         <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Email: "/>
         <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Contraseña: "/>
-        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="2" Grid.Column="3" Style="{StaticResource baseTextBox}"/>
-        <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar"/>
-        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="apellidosTextBox"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="numeroTextBox"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="dniTextBox"/>
+        <TextBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="emailTextBox"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="contraTextBox"/>
+        <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>
-<!-- DNI, nombre, apellido, contraseña, email, numContacto -->

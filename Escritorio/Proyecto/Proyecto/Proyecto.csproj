@@ -98,10 +98,16 @@
     <Compile Include="servicios\MedicoService.cs" />
     <Compile Include="servicios\PacienteService.cs" />
     <Compile Include="servicios\TratamientoService.cs" />
+    <Compile Include="viewmodels\EliminarHabitacionVM.cs" />
+    <Compile Include="viewmodels\EliminarMedicamentoVM.cs" />
+    <Compile Include="viewmodels\EliminarMedicoVM.cs" />
+    <Compile Include="viewmodels\EliminarPacienteVM.cs" />
+    <Compile Include="viewmodels\EliminarTratamientoVM.cs" />
     <Compile Include="viewmodels\HabitacionNuevaVM.cs" />
     <Compile Include="viewmodels\MainWindowVM.cs" />
     <Compile Include="viewmodels\MedicamentoNuevoVM.cs" />
     <Compile Include="viewmodels\MedicoNuevoVM.cs" />
+    <Compile Include="viewmodels\PacienteNuevoVM.cs" />
     <Compile Include="viewmodels\TratamientoNuevoVM.cs" />
     <Compile Include="vistas\EliminarHabitacion.xaml.cs">
       <DependentUpon>EliminarHabitacion.xaml</DependentUpon>

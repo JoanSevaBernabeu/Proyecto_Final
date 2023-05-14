@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto.viewmodels
 {
-    class EliminarMedico
+    class EliminarMedicoVM
     {
     }
 }
