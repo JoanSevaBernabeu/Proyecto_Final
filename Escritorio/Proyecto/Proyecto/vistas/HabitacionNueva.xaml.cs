@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto.clases;
+using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,30 @@ namespace Proyecto
     /// </summary>
     public partial class HabitacionNueva : Window
     {
+        HabitacionNuevaVM vm;
         public HabitacionNueva()
         {
+            vm = new HabitacionNuevaVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
+        }
+
+        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Habitacion habitacion = obtenerHabitacion();
+        }
+        private void cancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private Habitacion obtenerHabitacion()
+        {
+            string numeroHabitacion = nHabitacionTextBox.Text;
+            int camasTotales =int.Parse(nCamasTextBox.Text);
+            int camasOcupadas = int.Parse(ocuCamasTextBox.Text);
+            Habitacion habitacion = new Habitacion(numeroHabitacion, camasTotales, camasOcupadas);
+            return habitacion;
         }
     }
 }

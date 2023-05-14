@@ -29,7 +29,7 @@ namespace Proyecto.servicios
         public ObservableCollection<Medicamento> getMedicamento(string id)
         {
             var client = new RestClient(ruta);
-            var request = new RestRequest("/" + id, Method.GET);
+            var request = new RestRequest("/id/" + id, Method.GET);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Medicamento>>(response.Content);
         }

@@ -27,7 +27,7 @@ namespace Proyecto.servicios
         public ObservableCollection<Tratamiento> getTratamiento(string nombre)
         {
             var client = new RestClient(ruta);
-            var request = new RestRequest("/" + nombre, Method.GET);
+            var request = new RestRequest("/tratamiento/" + nombre, Method.GET);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Tratamiento>>(response.Content);
         }

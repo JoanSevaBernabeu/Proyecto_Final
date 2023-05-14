@@ -45,7 +45,7 @@ public class TratamientoResource {
     }
     
     @GET
-    @Path("{nombre}")
+    @Path("tratamiento/{nombre}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response getTratamiento(@PathParam("nombre") String nombre){
         Response response;

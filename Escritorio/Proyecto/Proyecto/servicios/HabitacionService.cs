@@ -29,7 +29,7 @@ namespace Proyecto.servicios
         public ObservableCollection<Habitacion> getHabitacion(string numero)
         {
             var client = new RestClient(ruta);
-            var request = new RestRequest("/" + numero, Method.GET);
+            var request = new RestRequest("/num/" + numero, Method.GET);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Habitacion>>(response.Content);
         }

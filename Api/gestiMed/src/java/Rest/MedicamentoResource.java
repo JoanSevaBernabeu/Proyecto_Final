@@ -44,7 +44,7 @@ public class MedicamentoResource {
     }
     
     @GET
-    @Path("{id}")
+    @Path("id/{id}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response getOneMedicamento(@PathParam("id") String id) {
         Response response;

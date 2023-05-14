@@ -62,7 +62,7 @@ public class DAOHabitacion {
             ResultSet rs = statement.executeQuery(sentencia);
             if(rs.next()){
                 habitacion.setNumHabitacion(rs.getString("numHabitacion"));
-                habitacion.setCamDisponibles(rs.getShort("numCamasDisp"));
+                habitacion.setCamTotales(rs.getShort("numCamasTotales"));
                 habitacion.setCamOcupadas(rs.getShort("numCamasOcu"));
             }
         }catch(SQLException ex){
@@ -94,7 +94,7 @@ public class DAOHabitacion {
         Statement statement = null;
         conectar();
         try{
-            String sentencia = "INSERT INTO habitacion VALUES ('"+habitacion.getNumHabitacion()+"',"+habitacion.getCamDisponibles()+","+habitacion.getCamOcupadas()+";";
+            String sentencia = "INSERT INTO habitacion VALUES ('"+habitacion.getNumHabitacion()+"',"+habitacion.getCamTotales()+","+habitacion.getCamOcupadas()+";";
             ResultSet rs = statement.executeQuery(sentencia);
             
         }catch(SQLException ex){

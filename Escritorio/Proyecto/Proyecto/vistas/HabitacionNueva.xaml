@@ -37,14 +37,14 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Numero de Habitacion: "/>
-        <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Numero de Habitacion: "/>
-        <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Numero de Habitacion: "/>
-        <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Column="3" Grid.Row="0" Style="{StaticResource baseTextBox}"/>
-        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource baseButton}" Content="Aceptar"/>
-        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource baseButton}" Content="Cancelar"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Nº de Habitacion: "/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Nº de Camas: "/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Nº de camas ocupadas: "/>
+        <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}" x:Name="nHabitacionTextBox"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="nCamasTextBox"/>
+        <TextBox Grid.Column="3" Grid.Row="0" Style="{StaticResource baseTextBox}" x:Name="ocuCamasTextBox"/>
+        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>
 <!-- NumHab, numCAmas, numCamasOcu -->

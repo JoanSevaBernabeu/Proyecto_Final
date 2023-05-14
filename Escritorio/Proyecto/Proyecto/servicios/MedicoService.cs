@@ -29,7 +29,7 @@ namespace Proyecto.servicios
         public ObservableCollection<Medico> getMedico(string dni)
         {
             var client = new RestClient(ruta);
-            var request = new RestRequest("/" + dni, Method.GET);
+            var request = new RestRequest("/dni/" + dni, Method.GET);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Medico>>(response.Content);
         }

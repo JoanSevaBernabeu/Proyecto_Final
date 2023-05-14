@@ -28,7 +28,7 @@ namespace Proyecto.servicios
         public ObservableCollection<Paciente> getPaciente(string sip)
         {
             var client = new RestClient(ruta);
-            var request = new RestRequest("/" + sip, Method.GET);
+            var request = new RestRequest("/sip/" + sip, Method.GET);
             var response = client.Execute(request);
             return JsonConvert.DeserializeObject<ObservableCollection<Paciente>>(response.Content);
         }

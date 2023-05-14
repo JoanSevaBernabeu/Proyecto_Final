@@ -38,9 +38,9 @@ public class Habitacion implements Serializable {
     @NotNull
     @Column(name = "numHabitacion")
     private String numHabitacion;
-    @Column(name = "numcamDisp")
-    private Short camDisponibles;
-    @Column(name = "numcamOcu")
+    @Column(name = "numCamasTotales")
+    private Short camTotales;
+    @Column(name = "numCamasOcu")
     private Short camOcupadas;
     @OneToMany(mappedBy = "numHabitacion")
     private List<Paciente> pacienteList;
@@ -52,9 +52,9 @@ public class Habitacion implements Serializable {
         this.numHabitacion = numHabitacion;
     }
 
-    public Habitacion(String numHabitacion, Short camDisponibles, Short camOcupadas) {
+    public Habitacion(String numHabitacion, Short camTotales, Short camOcupadas) {
         this.numHabitacion = numHabitacion;
-        this.camDisponibles = camDisponibles;
+        this.camTotales = camTotales;
         this.camOcupadas = camOcupadas;
     }
     
@@ -67,12 +67,12 @@ public class Habitacion implements Serializable {
         this.numHabitacion = numHabitacion;
     }
 
-    public Short getCamDisponibles() {
-        return camDisponibles;
+    public Short getCamTotales() {
+        return camTotales;
     }
 
-    public void setCamDisponibles(Short camDisponibles) {
-        this.camDisponibles = camDisponibles;
+    public void setCamTotales(Short camTotales) {
+        this.camTotales = camTotales;
     }
 
     public Short getCamOcupadas() {
