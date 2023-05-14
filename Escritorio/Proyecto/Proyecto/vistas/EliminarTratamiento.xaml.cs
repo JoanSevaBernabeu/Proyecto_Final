@@ -25,7 +25,7 @@ namespace Proyecto.vistas
         {
             vm = new EliminarTratamientoVM();
             this.DataContext = vm;
-            vm.setVentanta(this);
+            vm.setVentana(this);
             InitializeComponent();
         }
 
