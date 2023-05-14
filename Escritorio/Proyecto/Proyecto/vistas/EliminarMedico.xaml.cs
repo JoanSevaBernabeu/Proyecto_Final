@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,23 @@ namespace Proyecto.vistas
     /// </summary>
     public partial class EliminarMedico : Window
     {
+        private EliminarMedicoVM vm;
         public EliminarMedico()
         {
+            vm = new EliminarMedicoVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
+        }
+
+        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+            string dni = dniTextBox.Text;
+            vm.aceptar(dni);
+        }
+        private void cancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+            vm.cancelar();
         }
     }
 }

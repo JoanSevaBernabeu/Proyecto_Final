@@ -8,14 +8,14 @@ namespace Proyecto.clases
 {
     class Habitacion
     {
-        private int numHabitacion;
+        private string numHabitacion;
         private int numCamasDisp;
         private int numCamasOcu;
         private List<Paciente> pacientes;
 
         // Constructores
         public Habitacion() { }
-        public Habitacion(int numHabitacion, int numCamasDisp, int numCamasOcu) 
+        public Habitacion(string numHabitacion, int numCamasDisp, int numCamasOcu) 
         {
             this.numHabitacion = numHabitacion;
             this.numCamasDisp = numCamasDisp;
@@ -28,13 +28,13 @@ namespace Proyecto.clases
         }
 
         // Getters
-        public int getNumHabitacion() { return numHabitacion; }
+        public string getNumHabitacion() { return numHabitacion; }
         public int getNumCamasDisponibles() { return numCamasDisp; }
         public int getNumCamasOcupadas() { return numCamasOcu; }
         public List<Paciente> getListaPacientes() { return pacientes; }
 
         // Setters
-        public void setNumHabitacion(int numHabitacion) { this.numHabitacion = numHabitacion; }
+        public void setNumHabitacion(string numHabitacion) { this.numHabitacion = numHabitacion; }
         public void setNumCamasDisponibles(int numCamasDisponibles) { numCamasDisponibles = numCamasDisp; }
         public void setNumCamasOcupadas(int numCamasOcupadas) { numCamasOcupadas = numCamasOcu; }
         public void setListaPacientes(List<Paciente> pacientes) { this.pacientes = pacientes; }

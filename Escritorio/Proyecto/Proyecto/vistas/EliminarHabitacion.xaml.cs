@@ -23,5 +23,14 @@ namespace Proyecto.vistas
         {
             InitializeComponent();
         }
+
+        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void cancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
