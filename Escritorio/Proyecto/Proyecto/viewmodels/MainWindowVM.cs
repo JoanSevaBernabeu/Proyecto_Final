@@ -95,5 +95,17 @@ namespace Proyecto.viewmodels
         {
             this.ventana = ventana;
         }
+        public void pacienteNuevo()
+        {
+            PacienteNuevo paciente_nuevo = new PacienteNuevo();
+            paciente_nuevo.Owner = ventana;
+            paciente_nuevo.Show();
+        }
+        public void eliminarPaciente()
+        {
+            EliminarPaciente eliminar_paciente = new EliminarPaciente();
+            eliminar_paciente.Owner = ventana;
+            eliminar_paciente.Show();
+        }
     }
 }

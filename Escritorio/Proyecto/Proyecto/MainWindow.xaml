@@ -67,5 +67,6 @@
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
+        <TextBlock x:Name="mainText"/>
     </DockPanel>
 </Window>

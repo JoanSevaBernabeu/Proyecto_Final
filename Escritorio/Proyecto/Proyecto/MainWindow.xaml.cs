@@ -72,11 +72,11 @@ namespace Proyecto
         }
         private void CommandBindingPacienteNuevo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            vm.eliminarMedico();
+            vm.pacienteNuevo();
         }
         private void CommandBindingEliminarPaciente_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            vm.eliminarMedico();
+            vm.eliminarPaciente();
         }
     }
 }
