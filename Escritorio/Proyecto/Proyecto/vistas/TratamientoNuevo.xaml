@@ -45,11 +45,11 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource baseTextBlock}" Text="Descripcion: "/>
         <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Solucion: "/>
         <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Medicamento: "/>
-        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}"/>
-        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}"/>
-        <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseComboBox}"/>
-        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar"/>
-        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="descripcionTextBox"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="solucionTextBox"/>
+        <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseComboBox}" x:Name="medicamentoComboBox"/>
+        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>

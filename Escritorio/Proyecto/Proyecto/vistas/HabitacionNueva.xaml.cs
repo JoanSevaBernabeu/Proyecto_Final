@@ -33,10 +33,11 @@ namespace Proyecto
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
         {
             Habitacion habitacion = obtenerHabitacion();
+            vm.aceptar(habitacion);
         }
         private void cancelarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            vm.cancelar();
         }
         private Habitacion obtenerHabitacion()
         {
