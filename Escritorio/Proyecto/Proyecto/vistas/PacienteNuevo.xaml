@@ -112,9 +112,11 @@
                     <ComboBox Grid.Column="1" Grid.Row="2" x:Name="tratamientoComboBox" Style="{StaticResource baseComboBox}"/>
                     <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Urgencia: " />
                     <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Medicos: "/>
-                    <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico" Style="{StaticResource baseButton}"/>
+                    <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico" Style="{StaticResource baseButton}" Click="addButton_Click"/>
                     <ComboBox Grid.Column="3" Grid.Row="1" x:Name="urgenciaComboBox" Style="{StaticResource baseComboBox}"/>
-                    <ComboBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" x:Name="medicoComboBox" Style="{StaticResource baseComboBox}"/>
+                    <StackPanel Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" x:Name="medicosStackPanel">
+                        <ComboBox Style="{StaticResource baseComboBox}"/>
+                    </StackPanel>
                 </Grid>
             </Border>
             <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">

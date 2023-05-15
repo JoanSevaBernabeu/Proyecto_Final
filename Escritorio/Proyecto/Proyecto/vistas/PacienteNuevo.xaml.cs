@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,20 +20,29 @@ namespace Proyecto.vistas
     /// </summary>
     public partial class PacienteNuevo : Window
     {
+        private PacienteNuevoVM vm;
         public PacienteNuevo()
         {
+            vm = new PacienteNuevoVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
         }
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(SipTextBox.Text))
-            {
-                //vm.error();
-            }
-            else
-            {
-                //vm.aceptar();
-            }
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBox combo = new ComboBox();
+            combo.Width = 110;
+            combo.Height = 30;
+            StackPanel stack = medicosStackPanel;
+            stack.Children.Add(combo);
+        }
+        private void cancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+            vm.cancelar();
         }
     }
 }
