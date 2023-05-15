@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Proyecto.clases
         private string email;
         private string contrasenya;
         private string numContacto;
-        private List<Paciente> pacientes;
+        private Collection<Paciente> pacientes;
 
         //Constructores 
 
@@ -38,7 +39,7 @@ namespace Proyecto.clases
         public string getEmail() { return email; }
         public string getContrasenya() { return contrasenya; }
         public string getNumContacto() { return numContacto; }
-        public List<Paciente> getPacientes() { return pacientes; }
+        public Collection<Paciente> getPacientes() { return pacientes; }
 
         // Setters
 
@@ -47,6 +48,6 @@ namespace Proyecto.clases
         public void setApellidos(string apellidos) { this.apellidos = apellidos; }
         public void setEmail(string email) { this.email = email; }
         public void setContrasenya(string contrasenya) { this.contrasenya = contrasenya; }
-        public void setPacientes(List<Paciente> pacientes) { this.pacientes = pacientes; }
+        public void setPacientes(Collection<Paciente> pacientes) { this.pacientes = pacientes; }
     }
 }

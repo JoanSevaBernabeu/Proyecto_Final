@@ -48,10 +48,16 @@
         <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource baseTextBlock}" Text="Intervalo en horas: "/>
         <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Nombre: "/>
         <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Tratamientos: "/>
-        <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseComboBox}"/>
-        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource baseButton}" Content="Añadir tratamiento"/>
-        <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar"/>
-        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="idTextBox"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="cantidadTextBox"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="intervaloTextBox"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
+        <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" x:Name="tratamientosStackPanel">
+            <ComboBox  Style="{StaticResource baseComboBox}"/>
+        </StackPanel>
+        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource baseButton}" Content="Añadir tratamiento" Click="addButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>
 <!-- id, nombre, cantidad, intervalo, tratamientos-->

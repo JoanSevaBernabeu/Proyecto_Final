@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Proyecto.clases
         private string nombre;
         private int cantidad;
         private int intervalo;
-        private List<Tratamiento> tratamientos;
+        private Collection<Tratamiento> tratamientos;
 
         // Constructores
 
@@ -31,13 +32,13 @@ namespace Proyecto.clases
         public string getNombre() { return nombre; }
         public int getCantidad() { return cantidad; }
         public int getIntervalo() { return intervalo; }
-        public List<Tratamiento> getTratamiento() { return tratamientos; }
+        public Collection<Tratamiento> getTratamiento() { return tratamientos; }
 
         // Setters
         public void setId(string id) { this.id = id; }
         public void setNombre(string nombre) { this.nombre = nombre; }
         public void setCantidad(int cantidad) { this.cantidad = cantidad; }
         public void setIntervalo(int intervalo) { this.intervalo = intervalo; }
-        public void setTratamientos(List<Tratamiento> tratamientos) { this.tratamientos = tratamientos; }
+        public void setTratamientos(Collection<Tratamiento> tratamientos) { this.tratamientos = tratamientos; }
     }
 }

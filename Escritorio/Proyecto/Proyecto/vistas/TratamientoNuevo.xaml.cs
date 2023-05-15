@@ -53,7 +53,7 @@ namespace Proyecto
             else
             {
                 tratamiento = new Tratamiento(nombre, descripcion, solucion);
-                tratamiento.setMedicamento(medicamento);   
+                tratamiento.setMedicamento(medicamento);
             }
             return tratamiento;
         }

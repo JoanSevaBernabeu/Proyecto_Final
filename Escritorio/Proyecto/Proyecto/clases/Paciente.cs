@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Proyecto.clases
         private string dolencias;
         private string urgencia;
         private DateTime nacimiento;
-        private List<Medico> medicos;
+        private Collection<Medico> medicos;
         private Tratamiento tratamiento;
 
         //Constructores
@@ -38,7 +39,7 @@ namespace Proyecto.clases
         public string getApellidos() { return apellidos; }
         public string getNumContactos() { return numContacto; }
         public DateTime getNacimiento() { return nacimiento; }
-        public List<Medico> getMedicos() { return medicos; }
+        public Collection<Medico> getMedicos() { return medicos; }
         public Tratamiento getTratamiento() { return tratamiento; }
 
         //Setters
@@ -47,7 +48,7 @@ namespace Proyecto.clases
         public void setApellidos(string apellidos) { this.apellidos = apellidos; }
         public void setNumContacto(string numContacto) { this.numContacto = numContacto; }
         public void setNacimiento(DateTime nacimiento) { this.nacimiento = nacimiento; }
-        public void setMedicos(List<Medico> medicos) { this.medicos = medicos; }
+        public void setMedicos(Collection<Medico> medicos) { this.medicos = medicos; }
         public void setTratamiento(Tratamiento tratamiento) { this.tratamiento = tratamiento; }
     }
 }

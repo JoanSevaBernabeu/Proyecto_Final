@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Proyecto.clases;
+using Proyecto.viewmodels;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +22,64 @@ namespace Proyecto
     /// </summary>
     public partial class MedicamentoNuevo : Window
     {
+        private MedicamentoNuevoVM vm;
         public MedicamentoNuevo()
         {
+            vm = new MedicamentoNuevoVM();
+            this.DataContext = vm;
+            vm.setVentana(this);
             InitializeComponent();
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBox combo = new ComboBox();
+            combo.Width = 110;
+            combo.Height = 30;
+            Collection<Tratamiento> tratamientos = vm.getTratamientos();
+            foreach(Tratamiento trat in tratamientos)
+            {
+                combo.Items.Add(trat.getNombre());
+            }
+            StackPanel stack = tratamientosStackPanel;
+            stack.Children.Add(combo);
+        }
+        private void aceptarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Medicamento medicamento = obtenerMedicamento();
+            if (medicamento == null) vm.error();
+            else vm.aceptar(medicamento);
+        }
+        private void cancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+            vm.cancelar();
+        }
+        private Medicamento obtenerMedicamento()
+        {
+            // id, nombre, intervalo cantidad, tratamientos
+            Medicamento medicamento;
+            string id = idTextBox.Text;
+            int intervalo = int.Parse(intervaloTextBox.Text);
+            int cantidad = int.Parse(cantidadTextBox.Text);
+            string nombre = nombreTextBox.Text;
+            Collection<Tratamiento> tratamientos = obtenerTratamientos();
+            medicamento = new Medicamento(id, nombre, cantidad, intervalo);
+            medicamento.setTratamientos(tratamientos);
+            
+            return medicamento;
+        }
+
+        private Collection<Tratamiento> obtenerTratamientos()
+        {
+            StackPanel stack = tratamientosStackPanel;
+            Collection<Tratamiento> tratamientos = null;
+            for (int i = 0; i < stack.Children.Count; i++)
+            {
+                Tratamiento trat = vm.getTratamiento(stack.Children[i].ToString());
+                tratamientos.Add(trat);
+            }
+
+            return tratamientos;
         }
     }
 }
