@@ -166,7 +166,8 @@ public class Medico implements Serializable {
 
     @Override
     public String toString() {
-        return "clases.Medico[ dni=" + dni + " ]";
+        return "Medico{" + "dni:" + dni + ", nombre:" + nombre + ", apellidos:" + apellidos + ", email:" + email + ", contrasenya:" + contrasenya + ", numContacto:" + numContacto + ", pacienteList:" + pacienteList + '}';
     }
+    
     
 }

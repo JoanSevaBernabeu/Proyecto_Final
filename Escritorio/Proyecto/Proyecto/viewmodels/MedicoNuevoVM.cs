@@ -18,7 +18,7 @@ namespace Proyecto.viewmodels
         public void obtenerMedicos()
         {
             servicio = new MedicoService();
-            medicos = servicio.getAllMedicos();
+            medicos = servicio.GetAllMedicos();
         }
         public void aceptar(Medico med)
         {

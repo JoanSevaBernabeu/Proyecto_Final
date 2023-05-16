@@ -30,4 +30,10 @@ public class ListaMedico implements Serializable{
     public void add(Medico med){
         this.lista.add(med);
     }
+
+    @Override
+    public String toString() {
+        return "[" +lista + ']';
+    }
+    
 }

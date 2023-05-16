@@ -74,7 +74,7 @@ namespace Proyecto.viewmodels
         public Collection<Medico> getMedicos() 
         {
             MedicoService medServicio = new MedicoService();
-            Collection<Medico> medicos = medServicio.getAllMedicos();
+            ObservableCollection<Medico> medicos = medServicio.GetAllMedicos();
             return medicos;
         }
         public Medico getMedico(string dni)

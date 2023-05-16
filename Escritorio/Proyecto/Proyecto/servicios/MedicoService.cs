@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,10 +17,10 @@ namespace Proyecto.servicios
 
         public MedicoService()
         {
-            ruta = "http://localhost:8085/gestimed/gestiMed/medico";
+            ruta = "http://localhost:8085/gestiMed/gestimed/medico";
 
         }
-        public ObservableCollection<Medico> getAllMedicos()
+        public ObservableCollection<Medico> GetAllMedicos()
         {
             var client = new RestClient(ruta);
             var request = new RestRequest(Method.GET);

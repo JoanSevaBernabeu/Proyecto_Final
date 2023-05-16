@@ -16,7 +16,7 @@ namespace Proyecto.servicios
 
         public MedicamentoService()
         {
-            ruta = "http://localhost:8085/gestimed/gestiMed/medicamento";
+            ruta = "http://localhost:8085/gestiMed/gestimed/medicamento";
         }
 
         public ObservableCollection<Medicamento> getAllMedicamentos()
