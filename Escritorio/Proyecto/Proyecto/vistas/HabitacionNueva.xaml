@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto"
         mc:Ignorable="d"
-        Title="HabitacionNueva" Height="450" Width="800">
+        Title="HabitacionNueva" Height="400" Width="800">
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="baseTextBox">
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -16,11 +16,11 @@
         <Style TargetType="TextBlock" x:Key="baseTextBlock">
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="18"/>
         </Style>
         <Style TargetType="Button" x:Key="baseButton">
-            <Setter Property="Width" Value="170"/>
-            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
@@ -43,8 +43,8 @@
         <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}" x:Name="nHabitacionTextBox"/>
         <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="nCamasTextBox"/>
         <TextBox Grid.Column="3" Grid.Row="0" Style="{StaticResource baseTextBox}" x:Name="ocuCamasTextBox"/>
-        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
-        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
+        <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>
 <!-- NumHab, numCAmas, numCamasOcu -->

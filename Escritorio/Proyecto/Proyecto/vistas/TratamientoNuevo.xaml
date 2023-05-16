@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto"
         mc:Ignorable="d"
-        Title="TratamientoNuevo" Height="450" Width="800">
+        Title="TratamientoNuevo" Height="400" Width="600">
     <Window.Resources>
         <Style TargetType="TextBlock" x:Key="baseTextBlock">
             <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -13,20 +13,22 @@
             <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style TargetType="TextBox" x:Key="baseTextBox">
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="ComboBox" x:Key="baseComboBox">
-            <Setter Property="Width" Value="110"/>
+            <Setter Property="Width" Value="120"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style>
         <Style TargetType="Button" x:Key="baseButton">
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Width" Value="170"/>
-            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -43,13 +45,13 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource baseTextBlock}" Text="Nombre: "/>
         <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource baseTextBlock}" Text="Descripcion: "/>
-        <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Solucion: "/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Solución: "/>
         <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource baseTextBlock}" Text="Medicamento: "/>
         <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="nombreTextBox"/>
         <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource baseTextBox}" x:Name="descripcionTextBox"/>
         <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource baseTextBox}" x:Name="solucionTextBox"/>
         <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource baseComboBox}" x:Name="medicamentoComboBox"/>
-        <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
-        <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource baseButton}" Content="Aceptar" Click="aceptarButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource baseButton}" Content="Cancelar" Click="cancelarButton_Click"/>
     </Grid>
 </Window>

@@ -28,7 +28,7 @@ namespace Proyecto.vistas
             vm = new PacienteNuevoVM();
             this.DataContext = vm;
             vm.setVentana(this);
-            rellenaCombobox();
+            //rellenaCombobox();
             InitializeComponent();
         }
         private void aceptarButton_Click(object sender, RoutedEventArgs e)

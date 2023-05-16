@@ -28,7 +28,7 @@ namespace Proyecto
             vm = new MedicamentoNuevoVM();
             this.DataContext = vm;
             vm.setVentana(this);
-            rellenaComboBox();
+            //rellenaComboBox();
             InitializeComponent();
         }
 

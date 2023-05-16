@@ -38,6 +38,11 @@
             <Setter Property="InputGestureText" Value="Ctrl + C"/>
             <Setter Property="Command" Value="local:CustomCommands.Cancelar"/>
         </Style>
+        <Style TargetType="Button" x:Key="baseButton">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="40"/>
+            <Setter Property="Width" Value="50"/>  
+        </Style>
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -67,6 +72,7 @@
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
-        <TextBlock x:Name="mainText"/>
+        <Button DockPanel.Dock="Bottom" Content="Salir" Style="{StaticResource baseButton}"/>
+        <Image Source="/src/Hospital.jpg"/>
     </DockPanel>
 </Window>
