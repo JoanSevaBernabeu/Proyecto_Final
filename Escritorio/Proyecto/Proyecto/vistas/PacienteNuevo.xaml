@@ -86,9 +86,26 @@
                     <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="SipTextBox"/>
                     <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource baseTextBox}" x:Name="telefonoTextBox"/>
                     <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Apellido: " />
-                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Fecha nacimiento: "/>
+                    
+                    <Grid Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource baseTextBlock}" Text="Dia de nacimiento: "/>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource baseTextBlock}" Text="Mes de nacimiento: "/>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource baseTextBlock}" Text="Año de nacimiento: "/>
+                        <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource baseTextBox}" x:Name="diaTextBox"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="mesTextBox"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="anoTextBox"/>
+                    </Grid>
                     <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource baseTextBox}" x:Name="apellidoTextBox"/>
-                    <TextBox Grid.Column="3" Grid.Row="2" Style="{StaticResource baseTextBox}" x:Name="nacimientoTextBox"/>
+                    
                 </Grid>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource baseBorder}">
@@ -115,13 +132,13 @@
                     <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico" Style="{StaticResource baseButton}" Click="addButton_Click"/>
                     <ComboBox Grid.Column="3" Grid.Row="1" x:Name="urgenciaComboBox" Style="{StaticResource baseComboBox}"/>
                     <StackPanel Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" x:Name="medicosStackPanel">
-                        <ComboBox Style="{StaticResource baseComboBox}"/>
+                        
                     </StackPanel>
                 </Grid>
             </Border>
             <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="Sintomas" Style="{StaticResource enunciadoTextBlock}"/>
+                    <TextBlock DockPanel.Dock="Top" Text="Sintomas" Style="{StaticResource enunciadoTextBlock}" x:Name="sintomasTextBox"/>
                     <TextBox Style="{StaticResource sintomasTextBox}"/>
                 </DockPanel>
             </Border>

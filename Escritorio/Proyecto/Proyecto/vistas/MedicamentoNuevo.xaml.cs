@@ -28,16 +28,21 @@ namespace Proyecto
             vm = new MedicamentoNuevoVM();
             this.DataContext = vm;
             vm.setVentana(this);
+            rellenaComboBox();
             InitializeComponent();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
+            rellenaComboBox();
+        }
+        private void rellenaComboBox()
+        {
             ComboBox combo = new ComboBox();
             combo.Width = 110;
             combo.Height = 30;
             Collection<Tratamiento> tratamientos = vm.getTratamientos();
-            foreach(Tratamiento trat in tratamientos)
+            foreach (Tratamiento trat in tratamientos)
             {
                 combo.Items.Add(trat.getNombre());
             }

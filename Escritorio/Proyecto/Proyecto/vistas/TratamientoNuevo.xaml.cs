@@ -28,6 +28,7 @@ namespace Proyecto
             vm = new TratamientoNuevoVM();
             this.DataContext = vm;
             vm.setVentana(this);
+            rellenaComboBox();
             InitializeComponent();
         }
 

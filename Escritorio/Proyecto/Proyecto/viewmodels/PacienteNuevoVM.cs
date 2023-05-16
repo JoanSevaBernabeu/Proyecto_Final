@@ -84,5 +84,19 @@ namespace Proyecto.viewmodels
             if (medico.Count != 1) return null;
             else return medico[0];
         }
+        public Habitacion getHabitacion(string num)
+        {
+            HabitacionService habServicio = new HabitacionService();
+            ObservableCollection<Habitacion> habitaciones = habServicio.getHabitacion(num);
+            if (habitaciones.Count() != 1) return null;
+            else return habitaciones[0];
+        }
+        public Tratamiento getTratamiento(string nombre)
+        {
+            TratamientoService tratServicio = new TratamientoService();
+            ObservableCollection<Tratamiento> tratamientos = tratServicio.getTratamiento(nombre);
+            if (tratamientos.Count() != 1) return null;
+            else return tratamientos[0];
+        }
     }
 }

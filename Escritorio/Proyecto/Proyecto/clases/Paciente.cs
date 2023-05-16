@@ -18,7 +18,7 @@ namespace Proyecto.clases
         private DateTime nacimiento;
         private Collection<Medico> medicos;
         private Tratamiento tratamiento;
-
+        private Habitacion habitacion;
         //Constructores
         public Paciente() { }
 
@@ -41,6 +41,7 @@ namespace Proyecto.clases
         public DateTime getNacimiento() { return nacimiento; }
         public Collection<Medico> getMedicos() { return medicos; }
         public Tratamiento getTratamiento() { return tratamiento; }
+        public Habitacion getHabitacion() { return habitacion; }
 
         //Setters
         public void setSip(string sip) { this.sip = sip; }
@@ -50,5 +51,6 @@ namespace Proyecto.clases
         public void setNacimiento(DateTime nacimiento) { this.nacimiento = nacimiento; }
         public void setMedicos(Collection<Medico> medicos) { this.medicos = medicos; }
         public void setTratamiento(Tratamiento tratamiento) { this.tratamiento = tratamiento; }
+        public void setHabitacion(Habitacion habitacion) { this.habitacion = habitacion; }
     }
 }
