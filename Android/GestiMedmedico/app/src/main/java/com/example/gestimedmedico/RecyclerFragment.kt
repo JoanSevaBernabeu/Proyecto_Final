@@ -30,7 +30,7 @@ class RecyclerFragment: Fragment() {
             navController.navigate(R.id.action_recyclerFragment_to_pacienteFragment)
         }
 
-        recycler.layoutManager = LinearLayoutManager(requireActivity(),LinearLayoutManager.VERTICAL,false)
+        recycler.layoutManager = LinearLayoutManager(requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         return view
     }
 }
