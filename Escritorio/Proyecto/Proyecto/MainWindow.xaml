@@ -41,11 +41,12 @@
         <Style TargetType="Button" x:Key="baseButton">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="40"/>
-            <Setter Property="Width" Value="50"/>  
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="30"/>
         </Style>
     </Window.Resources>
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top" Background="LightSkyBlue">
             <MenuItem Header="Pacientes">
                 <MenuItem Header="Paciente nuevo..." InputGestureText="Ctrl + P" Command="local:CustomCommands.PacienteNuevo"/>
                 <MenuItem Header="Eliminar Paciente..." InputGestureText="Ctrl + N" Command="local:CustomCommands.EliminarPaciente"/>
@@ -72,7 +73,7 @@
                 <MenuItem Style="{StaticResource baseMenuItem}"/>
             </MenuItem>
         </Menu>
-        <Button DockPanel.Dock="Bottom" Content="Salir" Style="{StaticResource baseButton}"/>
-        <Image Source="/src/Hospital.jpg"/>
+        <Button DockPanel.Dock="Bottom" Content="Salir" Style="{StaticResource baseButton}" Click="salirButton_Click"/>
+        <Image Source="/src/logo2.png" Margin="20"/>
     </DockPanel>
 </Window>

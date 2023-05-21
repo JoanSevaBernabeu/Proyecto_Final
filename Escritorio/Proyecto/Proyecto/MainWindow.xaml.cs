@@ -78,5 +78,10 @@ namespace Proyecto
         {
             vm.eliminarPaciente();
         }
+
+        private void salirButton_Click(object sender, RoutedEventArgs e)
+        {
+            vm.cancelar();
+        }
     }
 }

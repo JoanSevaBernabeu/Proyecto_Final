@@ -5,6 +5,8 @@
         <group>
             <file>file:/D:/Proyecto_Final/Proyecto_Final/Api/gestiMed/src/java/listas/ListaMedico.java</file>
             <file>file:/D:/Proyecto_Final/Proyecto_Final/Api/gestiMed/src/java/clases/Medico.java</file>
+            <file>file:/D:/Proyecto_Final/Proyecto_Final/Api/gestiMed/src/java/DAO/DAOMedico.java</file>
+            <file>file:/D:/Proyecto_Final/Proyecto_Final/Api/gestiMed/src/java/DAO/DAOMedicamento.java</file>
             <file>file:/D:/Proyecto_Final/Proyecto_Final/Api/gestiMed/src/java/Rest/MedicoResource.java</file>
         </group>
     </open-files>

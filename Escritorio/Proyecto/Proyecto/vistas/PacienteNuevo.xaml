@@ -46,7 +46,7 @@
             <Setter Property="Margin" Value="50"/>
         </Style>
         <Style TargetType="Border" x:Key="baseBorder">
-            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Margin" Value="10"/>
         </Style>
@@ -132,7 +132,6 @@
                     <Button Grid.Column="2" Grid.Row="3" Content="Añadir medico" Style="{StaticResource baseButton}" Click="addButton_Click"/>
                     <ComboBox Grid.Column="3" Grid.Row="1" x:Name="urgenciaComboBox" Style="{StaticResource baseComboBox}"/>
                     <StackPanel Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" x:Name="medicosStackPanel">
-                        
                     </StackPanel>
                 </Grid>
             </Border>
@@ -147,8 +146,8 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}"/>
-                <Button Grid.Column="1" Content="Salir" Style="{StaticResource baseButton}"/>
+                <Button Grid.Column="0" Content="Aceptar" Style="{StaticResource baseButton}" Click="aceptarButton_Click"/>
+                <Button Grid.Column="1" Content="Salir" Style="{StaticResource baseButton}" Click="cancelarButton_Click"/>
             </Grid>
         </Grid>
     </DockPanel>

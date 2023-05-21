@@ -3,6 +3,8 @@ package com.example.gestimed
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,8 +16,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         model.setContxto(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_fragment)
+
         model.setListaMedicos(addMedicos())
+        model.setListaPacientes(addPacientes())
 
     }
     private fun addMedicos(): ArrayList<Medico>{
@@ -33,5 +37,19 @@ class MainActivity : AppCompatActivity() {
     private fun addTratamiento(medicamento:Medicamento):Tratamiento{
         var tratamiento = Tratamiento("cagarPadentro","Haser kk al reves","Haser la kk normal",medicamento)
         return tratamiento
+    }
+    private fun addHabitacion():Habitacion{
+        var habitacion = Habitacion("3",5,3)
+        return habitacion
+    }
+    private fun addPacientes():ArrayList<Paciente>{
+        var medicamento = addMedicamentos()
+        var tratamiento = addTratamiento(medicamento)
+        var habitacion = addHabitacion()
+        var pacientes = ArrayList<Paciente>()
+        pacientes.add(Paciente("1234","Joan1","Seva1","123445", Date(2020,4,4),listaMedicos,"Urgente",tratamiento,habitacion))
+        pacientes.add(Paciente("1234","Joan1","Seva1","123445", Date(2020,4,4),listaMedicos,"Medio",tratamiento,habitacion))
+        pacientes.add(Paciente("1234","Joan1","Seva1","123445", Date(2020,4,4),listaMedicos,"Urgente",tratamiento,habitacion))
+        return pacientes
     }
 }

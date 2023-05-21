@@ -29,23 +29,48 @@ namespace Proyecto.vistas
             this.DataContext = vm;
             vm.setVentana(this);
             //rellenaCombobox();
+            
+            
             InitializeComponent();
+            creaCombobox();
+            rellenaComboUrgencia();
         }
         private void aceptarButton_Click(object sender, RoutedEventArgs e)
         {
             Paciente paciente = obtenerPaciente();
             vm.aceptar(paciente);
         }
+        private void rellenaComboUrgencia()
+        {
+            urgenciaComboBox.Items.Add("Urgente");
+            urgenciaComboBox.Items.Add("Medio");
+            urgenciaComboBox.Items.Add("Bajo");
+        }
+        private void rellenaComboTratamiento()
+        {
 
+        }
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            rellenaCombobox();
+            //rellenaComboboxMedicos();
+            creaCombobox();
+        }
+        private void creaCombobox() 
+        {
+            ComboBox combo = new ComboBox();
+            combo.Width = 110;
+            combo.Height = 30;
+            combo.Items.Add("Joan");
+            combo.Items.Add("Antonio");
+            combo.Items.Add("Jose");
+            combo.Items.Add("Edurne");
+            medicosStackPanel.Children.Add(combo);
         }
         private void cancelarButton_Click(object sender, RoutedEventArgs e)
         {
             vm.cancelar();
         }
-        private void rellenaCombobox()
+        private void rellenaComboboxMedicos()
         {
             ComboBox combo = new ComboBox();
             combo.Width = 110;
